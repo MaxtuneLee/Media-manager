@@ -1,0 +1,18 @@
+﻿  Generate moc_predefs.h
+  UIC DuoMeiTiWenJianBuJian.ui
+  UIC loginPage.ui
+  RCC assets.qrc
+  MOC DuoMeiTiWenJian.h
+  MOC DuoMeiTiWenJianBuJian.h
+  MOC DuoMeiTiWenJianShaiXuan.h
+  DuoMeiTiWenJian.cpp
+  DuoMeiTiWenJianBuJian.cpp
+  DuoMeiTiWenJianShaiXuan.cpp
+  loginPage.cpp
+  main.cpp
+  moc_DuoMeiTiWenJian.cpp
+  moc_DuoMeiTiWenJianBuJian.cpp
+  moc_DuoMeiTiWenJianShaiXuan.cpp
+  qrc_assets.cpp
+  正在生成代码...
+C:\Users\SoulW\AppData\Local\QtMsBuild\qt_globals.targets(786,7): error MSB4184: 无法计算表达式“[System.IO.File]::ReadAllText(C:\Users\SoulW\AppData\Local\QtMsBuild\qt.natvis.xml)”。未能找到文件“C:\Users\SoulW\AppData\Local\QtMsBuild\qt.natvis.xml”。

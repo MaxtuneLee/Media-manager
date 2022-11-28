@@ -1,6 +1,6 @@
 #undef main
 #include "DuoMeiTiWenJianBuJian.h"
-#include "KouLingYanZheng.h"
+#include "loginPage.h"
 
 #include <QApplication>
 #include <QDir>
@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     QDir d = QDir::home();
     d.mkdir("Information");
     d.cd("Information");//打开建立文件路径
-    nanYou::KouLingYanZheng dengLu(d.absolutePath() + "/passwd");//进行口令验证
+    nanYou::loginPage dengLu(d.absolutePath() + "/passwd");//进行口令验证
     nanYou::DuoMeiTiWenJianBuJian w;//进行数据处理
     if (dengLu.exec() == QDialog::Accepted) {
         w.show();//显示界面

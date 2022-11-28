@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>nanYou::KouLingYanZheng</class>
- <widget class="QWidget" name="nanYou::KouLingYanZheng">
+ <class>nanYou::loginPage</class>
+ <widget class="QWidget" name="nanYou::loginPage">
   <property name="windowModality">
    <enum>Qt::WindowModal</enum>
   </property>
@@ -143,23 +143,23 @@ font-size: 16px;</string>
         <string>🔑 密码</string>
        </property>
        <property name="buddy">
-        <cstring>miMaShuRu</cstring>
+        <cstring>pwdInput</cstring>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="miMaShuRu">
+      <widget class="QLineEdit" name="pwdInput">
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>40</height>
+         <height>30</height>
         </size>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 8px;
 border-bottom-color: white;
 background-color:white;
-padding: 8px;</string>
+padding: 6px;</string>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -169,7 +169,7 @@ padding: 8px;</string>
     </layout>
    </item>
    <item>
-    <widget class="QPushButton" name="queRenAnNiu">
+    <widget class="QPushButton" name="submitButton">
      <property name="minimumSize">
       <size>
        <width>0</width>

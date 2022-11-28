@@ -7,7 +7,7 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
     DuoMeiTiWenJianBuJian.cpp \
-    KouLingYanZheng.cpp \
+    loginPage.cpp \
     DuoMeiTiWenJianShaiXuan.cpp \
     DuoMeiTiWenJian.cpp
 
@@ -15,11 +15,11 @@ HEADERS += \
     DuoMeiTiWenJianBuJian.h \
     DuoMeiTiWenJian.h \
     DuoMeiTiWenJianShaiXuan.h \
-    KouLingYanZheng.h
+    loginPage.h
 
 FORMS += \
     DuoMeiTiWenJianBuJian.ui \
-    KouLingYanZheng.ui
+    loginPage.ui
 
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

@@ -56,7 +56,7 @@
     <ClCompile Include="DuoMeiTiWenJianShaiXuan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KouLingYanZheng.cpp">
+    <ClCompile Include="loginPage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -73,9 +73,9 @@
     <CustomBuild Include="DuoMeiTiWenJianShaiXuan.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="KouLingYanZheng.h">
+    <ClInclude Include="loginPage.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="debug\moc_DuoMeiTiWenJian.cpp">
@@ -96,12 +96,6 @@
     <ClCompile Include="release\moc_DuoMeiTiWenJianShaiXuan.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="debug\moc_KouLingYanZheng.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
-    <ClCompile Include="release\moc_KouLingYanZheng.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <CustomBuild Include="debug\moc_predefs.h.cbt">
       <Filter>Generated Files</Filter>
     </CustomBuild>
@@ -117,7 +111,7 @@
     <ClInclude Include="ui_DuoMeiTiWenJianBuJian.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
-    <ClInclude Include="ui_KouLingYanZheng.h">
+    <ClInclude Include="ui_loginPage.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -125,7 +119,7 @@
     <CustomBuild Include="DuoMeiTiWenJianBuJian.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="KouLingYanZheng.ui">
+    <CustomBuild Include="loginPage.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>

@@ -143,23 +143,23 @@ font-size: 16px;</string>
         <string>🔑 密码</string>
        </property>
        <property name="buddy">
-        <cstring>miMaShuRu</cstring>
+        <cstring>pwdInput</cstring>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="miMaShuRu">
+      <widget class="QLineEdit" name="pwdInput">
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>40</height>
+         <height>30</height>
         </size>
        </property>
        <property name="styleSheet">
         <string notr="true">border-radius: 8px;
 border-bottom-color: white;
 background-color:white;
-padding: 8px;</string>
+padding: 6px;</string>
        </property>
        <property name="echoMode">
         <enum>QLineEdit::Password</enum>
@@ -169,28 +169,24 @@ padding: 8px;</string>
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QPushButton" name="queRenAnNiu">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: white;
+    <widget class="QPushButton" name="queRenAnNiu">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
 background-color: #429c82;
 padding: 10px;
 border: 0;
 border-radius: 18px;</string>
-       </property>
-       <property name="text">
-        <string>确认登录</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+     </property>
+     <property name="text">
+      <string>确认登录</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
