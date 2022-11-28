@@ -169,24 +169,28 @@ padding: 8px;</string>
     </layout>
    </item>
    <item>
-    <widget class="QPushButton" name="queRenAnNiu">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="queRenAnNiu">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
 background-color: #429c82;
 padding: 10px;
 border: 0;
 border-radius: 18px;</string>
-     </property>
-     <property name="text">
-      <string>确认登录</string>
-     </property>
-    </widget>
+       </property>
+       <property name="text">
+        <string>确认登录</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

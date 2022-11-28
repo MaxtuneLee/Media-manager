@@ -5,6 +5,8 @@
 #include <QDir>
 #include <QFile>
 #include <QDataStream>
+#include <QPainter>
+#include <QMouseEvent>
 
 namespace nanYou {
 
@@ -20,15 +22,26 @@ KouLingYanZheng::KouLingYanZheng(const QString &luJing, QWidget *fuBuJian) :
     connect(ui->queRenAnNiu, &QPushButton::clicked,
             this, &KouLingYanZheng::dianJiQueRen);
     connect(this, &KouLingYanZheng::dengLuWanCheng, this, &QDialog::accept);
-}//将验证界面的输入行和按钮和函数链接
 
+}//将验证界面的输入行和按钮和函数链接
+void KouLingYanZheng::mousePressEvent(QMouseEvent *event)
+{
+    if (event->button() == Qt::LeftButton) {
+        m_startPoint = frameGeometry().topLeft() - event->globalPos();
+    }
+}
+
+void KouLingYanZheng::mouseMoveEvent(QMouseEvent *event)
+{
+    this->move(event->globalPos() + m_startPoint);
+}
 void KouLingYanZheng::dianJiQueRen() {
     QString shuRuMing = "r";
     QByteArray miMa =
         ui->miMaShuRu->text().toUtf8();
             if ("root" != miMa)
-                QMessageBox::warning(this, "Login Failed",
-                    "Login Falied: " );
+                QMessageBox::warning(this, "提示",
+                    "登录失败，请检查密码是否正确" );
             else emit dengLuWanCheng(dengLuDeYongHu = shuRuMing);//判断是否验证成功
 }
 KouLingYanZheng::~KouLingYanZheng()
