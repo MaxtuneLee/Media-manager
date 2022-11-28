@@ -1,6 +1,6 @@
 #include "DuoMeiTiWenJian.h"
 
-namespace nanYou {
+namespace mediaManager {
 
 DuoMieTi::DuoMieTi() :
     wenJianMing("Input") , RiQi(QDate::currentDate()), faXingRiQi("2003-02-23") , leiXing("Input") , daXiao("Input"),

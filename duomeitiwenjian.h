@@ -5,7 +5,7 @@
 #include <QTime>
 #include <QDataStream>
 
-namespace nanYou {
+namespace mediaManager {
 
 struct DuoMieTi {
     QString wenJianMing;

@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <QMap>
 
-namespace nanYou {
+namespace mediaManager {
 
 namespace Ui {
 class loginPage;//声明验证界面
@@ -27,12 +27,13 @@ signals:
 
 private:
     Ui::loginPage *ui;
-    QMap<QString, QByteArray> yongHuShuJu;//
+    QMap<QString, QByteArray> userData;//
     QString dengLuDeYongHu, shuJuLuJing;//声明验证界面和口令内容
     QPoint m_startPoint;
 
 private slots:
     void dianJiQueRen();//声明确认函数
+    void on_pushButton_clicked();
 };
 
 

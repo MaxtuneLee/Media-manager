@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>nanYou::loginPage</class>
- <widget class="QWidget" name="nanYou::loginPage">
+ <class>mediaManager::loginPage</class>
+ <widget class="QWidget" name="mediaManager::loginPage">
   <property name="windowModality">
    <enum>Qt::WindowModal</enum>
   </property>
@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>250</width>
-    <height>340</height>
+    <height>341</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -169,24 +169,48 @@ padding: 6px;</string>
     </layout>
    </item>
    <item>
-    <widget class="QPushButton" name="queRenAnNiu">
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: white;
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="submitButton">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
 background-color: #429c82;
 padding: 10px;
 border: 0;
 border-radius: 18px;</string>
-     </property>
-     <property name="text">
-      <string>确认登录</string>
-     </property>
-    </widget>
+       </property>
+       <property name="text">
+        <string>确认登录</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: white;
+background-color: #969696;
+padding: 10px;
+border: 0;
+border-radius: 18px;</string>
+       </property>
+       <property name="text">
+        <string>退出程序</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

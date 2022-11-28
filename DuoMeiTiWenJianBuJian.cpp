@@ -8,7 +8,7 @@
 #include <QtCore/QDataStream>
 #include <QtWidgets/QFileDialog>
 
-namespace nanYou {
+namespace mediaManager {
 
 DuoMeiTiWenJianBuJian::DuoMeiTiWenJianBuJian(QWidget *parent)
     : QWidget(parent), ui(new Ui::DuoMeiTiWenJianBuJian)

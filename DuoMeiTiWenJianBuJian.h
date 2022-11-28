@@ -7,7 +7,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class DuoMeiTiWenJianBuJian; }
 QT_END_NAMESPACE
 
-namespace nanYou {
+namespace mediaManager {
 class DuoMeiTiWenJian;
 class DuoMeiTiWenJianShaiXuan;//定义筛选器类和数据类
 class DuoMeiTiWenJianBuJian : public QWidget {

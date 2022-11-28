@@ -8,7 +8,7 @@
 #include <QPainter>
 #include <QMouseEvent>
 
-namespace nanYou {
+namespace mediaManager {
 
 loginPage::loginPage(const QString &luJing, QWidget *fuBuJian) :
     QDialog(fuBuJian), ui(new Ui::loginPage), shuJuLuJing(luJing)//新建验证界面和验证器
@@ -17,9 +17,9 @@ loginPage::loginPage(const QString &luJing, QWidget *fuBuJian) :
     setWindowFlags (Qt::FramelessWindowHint);
     QFile f(luJing);
     f.open(QIODevice::ReadOnly);
-    QDataStream shuChuLiu(&f);//建立界面读取口令内容
-    shuChuLiu >> yongHuShuJu;
-    connect(ui->queRenAnNiu, &QPushButton::clicked,
+    QDataStream outputStream(&f);//建立界面读取口令内容
+    outputStream >> userData;
+    connect(ui->submitButton, &QPushButton::clicked,
             this, &loginPage::dianJiQueRen);
     connect(this, &loginPage::dengLuWanCheng, this, &QDialog::accept);
 
@@ -38,7 +38,7 @@ void loginPage::mouseMoveEvent(QMouseEvent *event)
 void loginPage::dianJiQueRen() {
     QString shuRuMing = "r";
     QByteArray miMa =
-        ui->miMaShuRu->text().toUtf8();
+        ui->pwdInput->text().toUtf8();
             if ("root" != miMa)
                 QMessageBox::warning(this, "提示",
                     "登录失败，请检查密码是否正确" );
@@ -47,6 +47,12 @@ void loginPage::dianJiQueRen() {
 loginPage::~loginPage()
 {
     delete ui;//删除界面进入下一步
+}
+
+
+void loginPage::on_pushButton_clicked()
+{
+    this->close();
 }
 
 }

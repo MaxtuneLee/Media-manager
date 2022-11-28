@@ -33,9 +33,9 @@ struct qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t {
     uint(sizeof(qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t qt_meta_stringdata_nanYou__DuoMeiTiWenJian = {
     {
-        QT_MOC_LITERAL(0, 23)   // "nanYou::DuoMeiTiWenJian"
+        QT_MOC_LITERAL(0, 23)   // "mediaManager::DuoMeiTiWenJian"
     },
-    "nanYou::DuoMeiTiWenJian"
+    "mediaManager::DuoMeiTiWenJian"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -56,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJian[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject nanYou::DuoMeiTiWenJian::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject mediaManager::DuoMeiTiWenJian::staticMetaObject = { {
     QMetaObject::SuperData::link<QAbstractTableModel::staticMetaObject>(),
     qt_meta_stringdata_nanYou__DuoMeiTiWenJian.offsetsAndSizes,
     qt_meta_data_nanYou__DuoMeiTiWenJian,
@@ -69,7 +69,7 @@ Q_CONSTINIT const QMetaObject nanYou::DuoMeiTiWenJian::staticMetaObject = { {
     nullptr
 } };
 
-void nanYou::DuoMeiTiWenJian::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void mediaManager::DuoMeiTiWenJian::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     (void)_o;
     (void)_id;
@@ -77,12 +77,12 @@ void nanYou::DuoMeiTiWenJian::qt_static_metacall(QObject *_o, QMetaObject::Call 
     (void)_a;
 }
 
-const QMetaObject *nanYou::DuoMeiTiWenJian::metaObject() const
+const QMetaObject *mediaManager::DuoMeiTiWenJian::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *nanYou::DuoMeiTiWenJian::qt_metacast(const char *_clname)
+void *mediaManager::DuoMeiTiWenJian::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_nanYou__DuoMeiTiWenJian.stringdata0))
@@ -90,7 +90,7 @@ void *nanYou::DuoMeiTiWenJian::qt_metacast(const char *_clname)
     return QAbstractTableModel::qt_metacast(_clname);
 }
 
-int nanYou::DuoMeiTiWenJian::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int mediaManager::DuoMeiTiWenJian::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QAbstractTableModel::qt_metacall(_c, _id, _a);
     return _id;

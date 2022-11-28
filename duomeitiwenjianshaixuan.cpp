@@ -2,7 +2,7 @@
 
 #include <QDateTime>
 
-namespace nanYou {
+namespace mediaManager {
 
 DuoMeiTiWenJianShaiXuan::DuoMeiTiWenJianShaiXuan(int dateCol, QObject *parent)
     : QSortFilterProxyModel{parent}, riQiLie(dateCol) {}

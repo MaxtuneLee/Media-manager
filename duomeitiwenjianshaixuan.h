@@ -4,7 +4,7 @@
 #include <QSortFilterProxyModel>
 #include <QDate>
 
-namespace nanYou {
+namespace mediaManager {
 
 class DuoMeiTiWenJianShaiXuan : public QSortFilterProxyModel
 {

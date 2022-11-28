@@ -1,0 +1,10 @@
+release/main.o
+release/DuoMeiTiWenJianBuJian.o
+release/loginPage.o
+release/DuoMeiTiWenJianShaiXuan.o
+release/DuoMeiTiWenJian.o
+release/qrc_assets.o
+release/moc_DuoMeiTiWenJianBuJian.o
+release/moc_DuoMeiTiWenJian.o
+release/moc_DuoMeiTiWenJianShaiXuan.o
+release/moc_loginPage.o

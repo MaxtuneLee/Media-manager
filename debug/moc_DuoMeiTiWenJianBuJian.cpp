@@ -25,25 +25,25 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
-struct qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian_t {
+struct qt_meta_stringdata_mediaManager__DuoMeiTiWenJianBuJian_t {
     uint offsetsAndSizes[10];
-    char stringdata0[30];
+    char stringdata0[36];
     char stringdata1[12];
     char stringdata2[1];
     char stringdata3[10];
     char stringdata4[13];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian_t qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian = {
+    uint(sizeof(qt_meta_stringdata_mediaManager__DuoMeiTiWenJianBuJian_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_mediaManager__DuoMeiTiWenJianBuJian_t qt_meta_stringdata_mediaManager__DuoMeiTiWenJianBuJian = {
     {
-        QT_MOC_LITERAL(0, 29),  // "nanYou::DuoMeiTiWenJianBuJian"
-        QT_MOC_LITERAL(30, 11),  // "baoCunShuJu"
-        QT_MOC_LITERAL(42, 0),  // ""
-        QT_MOC_LITERAL(43, 9),  // "duQuShuJu"
-        QT_MOC_LITERAL(53, 12)   // "queRenDengJi"
+        QT_MOC_LITERAL(0, 35),  // "mediaManager::DuoMeiTiWenJian..."
+        QT_MOC_LITERAL(36, 11),  // "baoCunShuJu"
+        QT_MOC_LITERAL(48, 0),  // ""
+        QT_MOC_LITERAL(49, 9),  // "duQuShuJu"
+        QT_MOC_LITERAL(59, 12)   // "queRenDengJi"
     },
-    "nanYou::DuoMeiTiWenJianBuJian",
+    "mediaManager::DuoMeiTiWenJianBuJian",
     "baoCunShuJu",
     "",
     "duQuShuJu",
@@ -52,7 +52,7 @@ Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian_t qt_m
 #undef QT_MOC_LITERAL
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJianBuJian[] = {
+Q_CONSTINIT static const uint qt_meta_data_mediaManager__DuoMeiTiWenJianBuJian[] = {
 
  // content:
       10,       // revision
@@ -78,13 +78,13 @@ Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJianBuJian[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject nanYou::DuoMeiTiWenJianBuJian::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject mediaManager::DuoMeiTiWenJianBuJian::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian.offsetsAndSizes,
-    qt_meta_data_nanYou__DuoMeiTiWenJianBuJian,
+    qt_meta_stringdata_mediaManager__DuoMeiTiWenJianBuJian.offsetsAndSizes,
+    qt_meta_data_mediaManager__DuoMeiTiWenJianBuJian,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_mediaManager__DuoMeiTiWenJianBuJian_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<DuoMeiTiWenJianBuJian, std::true_type>,
         // method 'baoCunShuJu'
@@ -97,7 +97,7 @@ Q_CONSTINIT const QMetaObject nanYou::DuoMeiTiWenJianBuJian::staticMetaObject = 
     nullptr
 } };
 
-void nanYou::DuoMeiTiWenJianBuJian::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void mediaManager::DuoMeiTiWenJianBuJian::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<DuoMeiTiWenJianBuJian *>(_o);
@@ -113,20 +113,20 @@ void nanYou::DuoMeiTiWenJianBuJian::qt_static_metacall(QObject *_o, QMetaObject:
     }
 }
 
-const QMetaObject *nanYou::DuoMeiTiWenJianBuJian::metaObject() const
+const QMetaObject *mediaManager::DuoMeiTiWenJianBuJian::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *nanYou::DuoMeiTiWenJianBuJian::qt_metacast(const char *_clname)
+void *mediaManager::DuoMeiTiWenJianBuJian::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_nanYou__DuoMeiTiWenJianBuJian.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_mediaManager__DuoMeiTiWenJianBuJian.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int nanYou::DuoMeiTiWenJianBuJian::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int mediaManager::DuoMeiTiWenJianBuJian::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)
