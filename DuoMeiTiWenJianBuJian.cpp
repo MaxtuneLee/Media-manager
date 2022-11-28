@@ -10,42 +10,42 @@
 
 namespace mediaManager {
 
-DuoMeiTiWenJianBuJian::DuoMeiTiWenJianBuJian(QWidget *parent)
-    : QWidget(parent), ui(new Ui::DuoMeiTiWenJianBuJian)
-    , duoMeiTiWenJian(new DuoMeiTiWenJian(this)), shaiXuan(new DuoMeiTiWenJianShaiXuan(1, this))//新建界面、数据和筛选器
+MediaComponent::MediaComponent(QWidget *parent)
+    : QWidget(parent), ui(new Ui::MediaComponent)
+    , mediaFile(new MediaFile(this)), mediaFilter(new MediaFliter(1, this))//新建界面、数据和筛选器
 {
     ui->setupUi(this);
-    shaiXuan->setSourceModel(duoMeiTiWenJian);
-    ui->duoMeiTiWenJianXianShi->setModel(shaiXuan);
+    mediaFilter->setSourceModel(mediaFile);
+    ui->duoMeiTiWenJianXianShi->setModel(mediaFilter);
     ui->duoMeiTiWenJianXianShi->horizontalHeader()
         ->setSectionResizeMode(QHeaderView::ResizeToContents);
     ui->duoMeiTiWenJianXianShi->setSortingEnabled(true);//建立界面并把界面内容传递给筛选器
 
     connect(ui->dengJiAnNiu, &QPushButton::clicked, this, [this]() {
-        duoMeiTiWenJian->insertRow(duoMeiTiWenJian->rowCount());
+        mediaFile->insertRow(mediaFile->rowCount());
     });
     connect(ui->queRenDengJiAnNiu, &QPushButton::clicked,
-            this, &DuoMeiTiWenJianBuJian::queRenDengJi);
+            this, &MediaComponent::dataRegister);
     connect(ui->baoCunAnNiu, &QPushButton::clicked,
-            this, &DuoMeiTiWenJianBuJian::baoCunShuJu);
+            this, &MediaComponent::dataSave);
     connect(ui->duQuAnNiu, &QPushButton::clicked,
-            this, &DuoMeiTiWenJianBuJian::duQuShuJu);
+            this, &MediaComponent::dataRead);
     connect(ui->zuiZaoRiQiBianJI, &QDateEdit::dateChanged,
-            shaiXuan, &DuoMeiTiWenJianShaiXuan::sheZhiZuiXiaoRiQi);
-    connect(ui->neiRong, &QLineEdit::textEdited, shaiXuan, &DuoMeiTiWenJianShaiXuan::sheZhiShuRuNeiRong);
-    connect(ui->SheZhiShaiXuanLie, &QComboBox::currentTextChanged,shaiXuan, &DuoMeiTiWenJianShaiXuan::sheZhiShaiXuanSuoZaiLie);
+            mediaFilter, &MediaFliter::minimumDate);
+    connect(ui->neiRong, &QLineEdit::textEdited, mediaFilter, &MediaFliter::setInput);
+    connect(ui->SheZhiShaiXuanLie, &QComboBox::currentTextChanged,mediaFilter, &MediaFliter::filterColumn);
     connect(ui->zuiWanRiQiBianJI, &QDateEdit::dateChanged,
-            shaiXuan, &DuoMeiTiWenJianShaiXuan::sheZhiZuiDaRiQi);
+            mediaFilter, &MediaFliter::maximumDate);
 }//将界面上的按钮和输入框与函数链接
 
-void DuoMeiTiWenJianBuJian::queRenDengJi() {
+void MediaComponent::dataRegister() {
     auto suoYouXuanZe = ui->duoMeiTiWenJianXianShi->selectionModel()->selectedIndexes();
     for (const QModelIndex& xuanZe : suoYouXuanZe) {
-        duoMeiTiWenJian->removeRow(xuanZe.row());//删除所选数据
+        mediaFile->removeRow(xuanZe.row());//删除所选数据
     }
 }
 
-QString DuoMeiTiWenJianBuJian::baoCunShuJu() {
+QString MediaComponent::dataSave() {
     QDir d = QDir::home();
     d.mkdir("Information");
     d.cd("Information");
@@ -53,11 +53,11 @@ QString DuoMeiTiWenJianBuJian::baoCunShuJu() {
     QFile f(shiJiLuJing);
     f.open(QIODevice::WriteOnly);
     QDataStream shuChuLiu(&f);
-    shuChuLiu << *duoMeiTiWenJian;
+    shuChuLiu << *mediaFile;
     return shiJiLuJing;
 }//实现文件的保存
 
-bool DuoMeiTiWenJianBuJian::duQuShuJu() {
+bool MediaComponent::dataRead() {
     QString xuanZe = QFileDialog::getOpenFileName(this, "Select lost+found data",
         QDir::homePath());
     QFile wenJian(xuanZe);
@@ -65,11 +65,11 @@ bool DuoMeiTiWenJianBuJian::duQuShuJu() {
     if (!wenJian.isOpen())
         return false;
     QDataStream shuRuLiu(&wenJian);
-    shuRuLiu >> *duoMeiTiWenJian;
+    shuRuLiu >> *mediaFile;
     return shuRuLiu.status() == QDataStream::Ok;
 }//实现文件的读取
 
-DuoMeiTiWenJianBuJian::~DuoMeiTiWenJianBuJian() {
+MediaComponent::~MediaComponent() {
     delete ui;
 }//删除界面结束程序
 

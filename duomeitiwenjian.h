@@ -18,17 +18,17 @@ struct DuoMieTi {
 QDataStream& operator<<(QDataStream& wenJianLiu, const DuoMieTi& meiTi);
 QDataStream& operator>>(QDataStream& wenJianLiu, DuoMieTi& meiTi);//声明文件保存与读取函数
 
-class DuoMeiTiWenJian : public QAbstractTableModel {
+class MediaFile : public QAbstractTableModel {
     Q_OBJECT
     QVector<DuoMieTi> duoMieTiZu;//建立建立结构体数组储存数据
 
-    friend QDataStream& operator<<(QDataStream& wenJianLiu, const DuoMeiTiWenJian& duoMeiTiWenJian) {
-        return wenJianLiu << duoMeiTiWenJian.duoMieTiZu;
+    friend QDataStream& operator<<(QDataStream& wenJianLiu, const MediaFile& mediaFile) {
+        return wenJianLiu << mediaFile.duoMieTiZu;
     }
-    friend QDataStream& operator>>(QDataStream& wenJianLiu, DuoMeiTiWenJian& duoMeiTiWenJian) {
-        duoMeiTiWenJian.beginResetModel();
-        wenJianLiu >> duoMeiTiWenJian.duoMieTiZu;
-        duoMeiTiWenJian.endResetModel();
+    friend QDataStream& operator>>(QDataStream& wenJianLiu, MediaFile& mediaFile) {
+        mediaFile.beginResetModel();
+        wenJianLiu >> mediaFile.duoMieTiZu;
+        mediaFile.endResetModel();
         return wenJianLiu;
     }//文件的保存与读取
 public:
@@ -47,7 +47,7 @@ public:
                  int zuoYong = Qt::EditRole);//声明数据更改函数
 
     const QVector<DuoMieTi>& huoQuDuoMeiTi() const {return duoMieTiZu;}//获取数据信息
-    explicit DuoMeiTiWenJian(QObject *parent = nullptr);
+    explicit MediaFile(QObject *parent = nullptr);
 };
 
 }

@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'DuoMeiTiWenJianBuJian.ui'
+** Form generated from reading UI file 'MediaComponent.ui'
 **
 ** Created by: Qt User Interface Compiler version 6.4.1
 **
@@ -39,14 +39,14 @@ public:
     QLineEdit *neiRong;
     QLabel *label;
 
-    void setupUi(QWidget *DuoMeiTiWenJianBuJian)
+    void setupUi(QWidget *MediaComponent)
     {
-        if (DuoMeiTiWenJianBuJian->objectName().isEmpty())
-            DuoMeiTiWenJianBuJian->setObjectName("DuoMeiTiWenJianBuJian");
-        DuoMeiTiWenJianBuJian->resize(596, 489);
-        gridLayout = new QGridLayout(DuoMeiTiWenJianBuJian);
+        if (MediaComponent->objectName().isEmpty())
+            MediaComponent->setObjectName("MediaComponent");
+        MediaComponent->resize(596, 489);
+        gridLayout = new QGridLayout(MediaComponent);
         gridLayout->setObjectName("gridLayout");
-        SheZhiShaiXuanLie = new QComboBox(DuoMeiTiWenJianBuJian);
+        SheZhiShaiXuanLie = new QComboBox(MediaComponent);
         SheZhiShaiXuanLie->addItem(QString());
         SheZhiShaiXuanLie->addItem(QString());
         SheZhiShaiXuanLie->addItem(QString());
@@ -57,48 +57,48 @@ public:
 
         gridLayout->addWidget(SheZhiShaiXuanLie, 6, 3, 1, 1);
 
-        duoMeiTiWenJianXianShi = new QTableView(DuoMeiTiWenJianBuJian);
+        duoMeiTiWenJianXianShi = new QTableView(MediaComponent);
         duoMeiTiWenJianXianShi->setObjectName("duoMeiTiWenJianXianShi");
 
         gridLayout->addWidget(duoMeiTiWenJianXianShi, 0, 0, 1, 4);
 
-        baoCunAnNiu = new QPushButton(DuoMeiTiWenJianBuJian);
+        baoCunAnNiu = new QPushButton(MediaComponent);
         baoCunAnNiu->setObjectName("baoCunAnNiu");
 
         gridLayout->addWidget(baoCunAnNiu, 1, 2, 1, 1);
 
-        dengJiAnNiu = new QPushButton(DuoMeiTiWenJianBuJian);
+        dengJiAnNiu = new QPushButton(MediaComponent);
         dengJiAnNiu->setObjectName("dengJiAnNiu");
 
         gridLayout->addWidget(dengJiAnNiu, 1, 0, 1, 1);
 
-        duQuAnNiu = new QPushButton(DuoMeiTiWenJianBuJian);
+        duQuAnNiu = new QPushButton(MediaComponent);
         duQuAnNiu->setObjectName("duQuAnNiu");
 
         gridLayout->addWidget(duQuAnNiu, 1, 3, 1, 1);
 
-        queRenDengJiAnNiu = new QPushButton(DuoMeiTiWenJianBuJian);
+        queRenDengJiAnNiu = new QPushButton(MediaComponent);
         queRenDengJiAnNiu->setObjectName("queRenDengJiAnNiu");
 
         gridLayout->addWidget(queRenDengJiAnNiu, 3, 0, 1, 1);
 
-        zuiZaoRiQiBianJI = new QDateEdit(DuoMeiTiWenJianBuJian);
+        zuiZaoRiQiBianJI = new QDateEdit(MediaComponent);
         zuiZaoRiQiBianJI->setObjectName("zuiZaoRiQiBianJI");
 
         gridLayout->addWidget(zuiZaoRiQiBianJI, 6, 0, 1, 1);
 
-        zuiWanRiQiBianJI = new QDateEdit(DuoMeiTiWenJianBuJian);
+        zuiWanRiQiBianJI = new QDateEdit(MediaComponent);
         zuiWanRiQiBianJI->setObjectName("zuiWanRiQiBianJI");
         zuiWanRiQiBianJI->setDateTime(QDateTime(QDate(2100, 1, 1), QTime(0, 0, 0)));
 
         gridLayout->addWidget(zuiWanRiQiBianJI, 6, 1, 1, 1);
 
-        _z = new QLabel(DuoMeiTiWenJianBuJian);
+        _z = new QLabel(MediaComponent);
         _z->setObjectName("_z");
 
         gridLayout->addWidget(_z, 4, 0, 1, 2);
 
-        neiRong = new QLineEdit(DuoMeiTiWenJianBuJian);
+        neiRong = new QLineEdit(MediaComponent);
         neiRong->setObjectName("neiRong");
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -108,42 +108,42 @@ public:
 
         gridLayout->addWidget(neiRong, 6, 2, 1, 1);
 
-        label = new QLabel(DuoMeiTiWenJianBuJian);
+        label = new QLabel(MediaComponent);
         label->setObjectName("label");
 
         gridLayout->addWidget(label, 4, 2, 1, 1);
 
 
-        retranslateUi(DuoMeiTiWenJianBuJian);
+        retranslateUi(MediaComponent);
 
-        QMetaObject::connectSlotsByName(DuoMeiTiWenJianBuJian);
+        QMetaObject::connectSlotsByName(MediaComponent);
     } // setupUi
 
-    void retranslateUi(QWidget *DuoMeiTiWenJianBuJian)
+    void retranslateUi(QWidget *MediaComponent)
     {
         SheZhiShaiXuanLie->setItemText(0, QString());
-        SheZhiShaiXuanLie->setItemText(1, QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Type", nullptr));
-        SheZhiShaiXuanLie->setItemText(2, QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Director", nullptr));
-        SheZhiShaiXuanLie->setItemText(3, QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Name", nullptr));
-        SheZhiShaiXuanLie->setItemText(4, QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Actor", nullptr));
-        SheZhiShaiXuanLie->setItemText(5, QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Prize", nullptr));
+        SheZhiShaiXuanLie->setItemText(1, QCoreApplication::translate("MediaComponent", "Type", nullptr));
+        SheZhiShaiXuanLie->setItemText(2, QCoreApplication::translate("MediaComponent", "Director", nullptr));
+        SheZhiShaiXuanLie->setItemText(3, QCoreApplication::translate("MediaComponent", "Name", nullptr));
+        SheZhiShaiXuanLie->setItemText(4, QCoreApplication::translate("MediaComponent", "Actor", nullptr));
+        SheZhiShaiXuanLie->setItemText(5, QCoreApplication::translate("MediaComponent", "Prize", nullptr));
 
         SheZhiShaiXuanLie->setCurrentText(QString());
-        baoCunAnNiu->setText(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Save", nullptr));
-        dengJiAnNiu->setText(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Register", nullptr));
-        duQuAnNiu->setText(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Load", nullptr));
-        queRenDengJiAnNiu->setText(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Remove", nullptr));
-        zuiZaoRiQiBianJI->setDisplayFormat(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "yyyy-MM-dd", nullptr));
-        zuiWanRiQiBianJI->setDisplayFormat(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "yyyy-MM-dd", nullptr));
-        _z->setText(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Filter Date: (from, to)", nullptr));
-        label->setText(QCoreApplication::translate("DuoMeiTiWenJianBuJian", "Search", nullptr));
-        (void)DuoMeiTiWenJianBuJian;
+        baoCunAnNiu->setText(QCoreApplication::translate("MediaComponent", "Save", nullptr));
+        dengJiAnNiu->setText(QCoreApplication::translate("MediaComponent", "Register", nullptr));
+        duQuAnNiu->setText(QCoreApplication::translate("MediaComponent", "Load", nullptr));
+        queRenDengJiAnNiu->setText(QCoreApplication::translate("MediaComponent", "Remove", nullptr));
+        zuiZaoRiQiBianJI->setDisplayFormat(QCoreApplication::translate("MediaComponent", "yyyy-MM-dd", nullptr));
+        zuiWanRiQiBianJI->setDisplayFormat(QCoreApplication::translate("MediaComponent", "yyyy-MM-dd", nullptr));
+        _z->setText(QCoreApplication::translate("MediaComponent", "Filter Date: (from, to)", nullptr));
+        label->setText(QCoreApplication::translate("MediaComponent", "Search", nullptr));
+        (void)MediaComponent;
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class DuoMeiTiWenJianBuJian: public Ui_DuoMeiTiWenJianBuJian {};
+    class MediaComponent: public Ui_DuoMeiTiWenJianBuJian {};
 } // namespace Ui
 
 QT_END_NAMESPACE

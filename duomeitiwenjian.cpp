@@ -18,9 +18,9 @@ QDataStream& operator>>(QDataStream& wenJianLiu, DuoMieTi& duoMeiTi) {
            >> duoMeiTi.jiangXiang >> duoMeiTi.liuLanCiShu;
 }//实现数据的保存与读取
 
-DuoMeiTiWenJian::DuoMeiTiWenJian(QObject *parent) : QAbstractTableModel{parent} {}
+MediaFile::MediaFile(QObject *parent) : QAbstractTableModel{parent} {}
 
-bool DuoMeiTiWenJian::insertRows(int hang, int shu, const QModelIndex &par) {
+bool MediaFile::insertRows(int hang, int shu, const QModelIndex &par) {
 
     if (hang > duoMieTiZu.size() || hang < 0 || shu <= 0)
         return false;
@@ -31,7 +31,7 @@ bool DuoMeiTiWenJian::insertRows(int hang, int shu, const QModelIndex &par) {
 }//实现界面增加行
 
 
-bool DuoMeiTiWenJian::removeRows(int hang, int shu, const QModelIndex &par) {
+bool MediaFile::removeRows(int hang, int shu, const QModelIndex &par) {
     if (hang < 0 || shu <= 0 || hang + shu > duoMieTiZu.size())
         return false;
     beginRemoveRows(par, hang, hang + shu - 1);
@@ -40,7 +40,7 @@ bool DuoMeiTiWenJian::removeRows(int hang, int shu, const QModelIndex &par) {
     return true;
 }//实现界面移除行
 
-QVariant DuoMeiTiWenJian::headerData(int diJiGe, Qt::Orientation fangXiang,
+QVariant MediaFile::headerData(int diJiGe, Qt::Orientation fangXiang,
                                      int zuoYong) const {
 
     if (zuoYong != Qt::DisplayRole) return QVariant();
@@ -62,7 +62,7 @@ QVariant DuoMeiTiWenJian::headerData(int diJiGe, Qt::Orientation fangXiang,
 }//实现界面头标识显示
 
 
-QVariant DuoMeiTiWenJian::data(const QModelIndex &index, int zuoYong) const {
+QVariant MediaFile::data(const QModelIndex &index, int zuoYong) const {
     const DuoMieTi &toShow = duoMieTiZu.at(index.row());
 
     if (zuoYong != Qt::DisplayRole)
@@ -82,12 +82,12 @@ QVariant DuoMeiTiWenJian::data(const QModelIndex &index, int zuoYong) const {
     return QVariant();
 }//实现界面显示数据内容
 
-Qt::ItemFlags DuoMeiTiWenJian::flags(const QModelIndex &suoYin) const {
+Qt::ItemFlags MediaFile::flags(const QModelIndex &suoYin) const {
 
     return QAbstractTableModel::flags(suoYin) | Qt::ItemIsEditable;
 }//实现控制数据编辑
 
-bool DuoMeiTiWenJian::setData(const QModelIndex &suoYin, const QVariant &zhi, int zuoYong) {
+bool MediaFile::setData(const QModelIndex &suoYin, const QVariant &zhi, int zuoYong) {
 
     if (zuoYong != Qt::EditRole) return false;
 

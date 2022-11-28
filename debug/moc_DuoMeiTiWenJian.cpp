@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'DuoMeiTiWenJian.h'
+** Meta object code from reading C++ file 'MediaFile.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.1)
 **
@@ -33,9 +33,9 @@ struct qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t {
     uint(sizeof(qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t qt_meta_stringdata_nanYou__DuoMeiTiWenJian = {
     {
-        QT_MOC_LITERAL(0, 23)   // "mediaManager::DuoMeiTiWenJian"
+        QT_MOC_LITERAL(0, 23)   // "mediaManager::MediaFile"
     },
-    "mediaManager::DuoMeiTiWenJian"
+    "mediaManager::MediaFile"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -56,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJian[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject mediaManager::DuoMeiTiWenJian::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject mediaManager::MediaFile::staticMetaObject = { {
     QMetaObject::SuperData::link<QAbstractTableModel::staticMetaObject>(),
     qt_meta_stringdata_nanYou__DuoMeiTiWenJian.offsetsAndSizes,
     qt_meta_data_nanYou__DuoMeiTiWenJian,
@@ -64,12 +64,12 @@ Q_CONSTINIT const QMetaObject mediaManager::DuoMeiTiWenJian::staticMetaObject = 
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<DuoMeiTiWenJian, std::true_type>
+        QtPrivate::TypeAndForceComplete<MediaFile, std::true_type>
     >,
     nullptr
 } };
 
-void mediaManager::DuoMeiTiWenJian::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void mediaManager::MediaFile::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     (void)_o;
     (void)_id;
@@ -77,12 +77,12 @@ void mediaManager::DuoMeiTiWenJian::qt_static_metacall(QObject *_o, QMetaObject:
     (void)_a;
 }
 
-const QMetaObject *mediaManager::DuoMeiTiWenJian::metaObject() const
+const QMetaObject *mediaManager::MediaFile::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *mediaManager::DuoMeiTiWenJian::qt_metacast(const char *_clname)
+void *mediaManager::MediaFile::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_nanYou__DuoMeiTiWenJian.stringdata0))
@@ -90,7 +90,7 @@ void *mediaManager::DuoMeiTiWenJian::qt_metacast(const char *_clname)
     return QAbstractTableModel::qt_metacast(_clname);
 }
 
-int mediaManager::DuoMeiTiWenJian::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int mediaManager::MediaFile::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QAbstractTableModel::qt_metacall(_c, _id, _a);
     return _id;

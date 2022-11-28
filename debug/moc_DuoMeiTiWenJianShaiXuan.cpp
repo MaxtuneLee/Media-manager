@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'DuoMeiTiWenJianShaiXuan.h'
+** Meta object code from reading C++ file 'MediaFliter.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.1)
 **
@@ -33,9 +33,9 @@ struct qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t {
     uint(sizeof(qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan = {
     {
-        QT_MOC_LITERAL(0, 31)   // "mediaManager::DuoMeiTiWenJianShaiXuan"
+        QT_MOC_LITERAL(0, 31)   // "mediaManager::MediaFliter"
     },
-    "mediaManager::DuoMeiTiWenJianShaiXuan"
+    "mediaManager::MediaFliter"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -56,7 +56,7 @@ Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJianShaiXuan[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject mediaManager::DuoMeiTiWenJianShaiXuan::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject mediaManager::MediaFliter::staticMetaObject = { {
     QMetaObject::SuperData::link<QSortFilterProxyModel::staticMetaObject>(),
     qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan.offsetsAndSizes,
     qt_meta_data_nanYou__DuoMeiTiWenJianShaiXuan,
@@ -64,12 +64,12 @@ Q_CONSTINIT const QMetaObject mediaManager::DuoMeiTiWenJianShaiXuan::staticMetaO
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<DuoMeiTiWenJianShaiXuan, std::true_type>
+        QtPrivate::TypeAndForceComplete<MediaFliter, std::true_type>
     >,
     nullptr
 } };
 
-void mediaManager::DuoMeiTiWenJianShaiXuan::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void mediaManager::MediaFliter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     (void)_o;
     (void)_id;
@@ -77,12 +77,12 @@ void mediaManager::DuoMeiTiWenJianShaiXuan::qt_static_metacall(QObject *_o, QMet
     (void)_a;
 }
 
-const QMetaObject *mediaManager::DuoMeiTiWenJianShaiXuan::metaObject() const
+const QMetaObject *mediaManager::MediaFliter::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *mediaManager::DuoMeiTiWenJianShaiXuan::qt_metacast(const char *_clname)
+void *mediaManager::MediaFliter::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan.stringdata0))
@@ -90,7 +90,7 @@ void *mediaManager::DuoMeiTiWenJianShaiXuan::qt_metacast(const char *_clname)
     return QSortFilterProxyModel::qt_metacast(_clname);
 }
 
-int mediaManager::DuoMeiTiWenJianShaiXuan::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int mediaManager::MediaFliter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QSortFilterProxyModel::qt_metacall(_c, _id, _a);
     return _id;
