@@ -10,49 +10,55 @@
 
 namespace mediaManager {
 
-loginPage::loginPage(const QString &luJing, QWidget *fuBuJian) :
-    QDialog(fuBuJian), ui(new Ui::loginPage), shuJuLuJing(luJing)//新建验证界面和验证器
-{
-    ui->setupUi(this);
-    setWindowFlags (Qt::FramelessWindowHint);
-    QFile f(luJing);
-    f.open(QIODevice::ReadOnly);
-    QDataStream outputStream(&f);//建立界面读取口令内容
-    outputStream >> userData;
-    connect(ui->submitButton, &QPushButton::clicked,
-            this, &loginPage::dianJiQueRen);
-    connect(this, &loginPage::dengLuWanCheng, this, &QDialog::accept);
+	//将验证界面的输入行和按钮和函数链接
+	loginPage::loginPage(const QString& path, QWidget* component) :
+		QDialog(component), ui(new Ui::loginPage), shuJuLuJing(path)//新建验证界面和验证器
+	{
+		ui->setupUi(this);
+		//让窗口透明
+		setWindowFlags(Qt::FramelessWindowHint);
+		QFile f(path);
+		f.open(QIODevice::ReadOnly);
+		//建立界面读取口令内容
+		QDataStream outputStream(&f);
+		outputStream >> userData;
+		connect(ui->submitButton, &QPushButton::clicked,
+			this, &loginPage::submit);
+		connect(this, &loginPage::loginSuccess, this, &QDialog::accept);
 
-}//将验证界面的输入行和按钮和函数链接
-void loginPage::mousePressEvent(QMouseEvent *event)
-{
-    if (event->button() == Qt::LeftButton) {
-        m_startPoint = frameGeometry().topLeft() - event->globalPos();
-    }
-}
+	}
+	//监听鼠标按下，实现窗口拖动操作
+	void loginPage::mousePressEvent(QMouseEvent* event)
+	{
+		if (event->button() == Qt::LeftButton) {
+			m_startPoint = frameGeometry().topLeft() - event->globalPos();
+		}
+	}
+	//监听鼠标移动，实现窗口拖动效果
+	void loginPage::mouseMoveEvent(QMouseEvent* event)
+	{
+		this->move(event->globalPos() + m_startPoint);
+	}
+	void loginPage::submit() {
+		QString username = "root";
+		QByteArray password =
+			ui->pwdInput->text().toUtf8();
+		if ("root" != password)
+			QMessageBox::warning(this, "提示",
+				"登录失败，请检查密码是否正确");
+		else emit loginSuccess(user = username);//判断是否验证成功
+	}
 
-void loginPage::mouseMoveEvent(QMouseEvent *event)
-{
-    this->move(event->globalPos() + m_startPoint);
-}
-void loginPage::dianJiQueRen() {
-    QString shuRuMing = "r";
-    QByteArray miMa =
-        ui->pwdInput->text().toUtf8();
-            if ("root" != miMa)
-                QMessageBox::warning(this, "提示",
-                    "登录失败，请检查密码是否正确" );
-            else emit dengLuWanCheng(dengLuDeYongHu = shuRuMing);//判断是否验证成功
-}
-loginPage::~loginPage()
-{
-    delete ui;//删除界面进入下一步
-}
+	//删除界面进入下一步
+	loginPage::~loginPage()
+	{
+		delete ui;
+	}
 
-
-void loginPage::on_pushButton_clicked()
-{
-    this->close();
-}
+	//关闭程序
+	void loginPage::on_pushButton_clicked()
+	{
+		this->close();
+	}
 
 }

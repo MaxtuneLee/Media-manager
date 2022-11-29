@@ -28,9 +28,9 @@ namespace {
 struct qt_meta_stringdata_mediaManager__loginPage_t {
     uint offsetsAndSizes[10];
     char stringdata0[24];
-    char stringdata1[15];
+    char stringdata1[13];
     char stringdata2[1];
-    char stringdata3[13];
+    char stringdata3[7];
     char stringdata4[22];
 };
 #define QT_MOC_LITERAL(ofs, len) \
@@ -38,15 +38,15 @@ struct qt_meta_stringdata_mediaManager__loginPage_t {
 Q_CONSTINIT static const qt_meta_stringdata_mediaManager__loginPage_t qt_meta_stringdata_mediaManager__loginPage = {
     {
         QT_MOC_LITERAL(0, 23),  // "mediaManager::loginPage"
-        QT_MOC_LITERAL(24, 14),  // "dengLuWanCheng"
-        QT_MOC_LITERAL(39, 0),  // ""
-        QT_MOC_LITERAL(40, 12),  // "dianJiQueRen"
-        QT_MOC_LITERAL(53, 21)   // "on_pushButton_clicked"
+        QT_MOC_LITERAL(24, 12),  // "loginSuccess"
+        QT_MOC_LITERAL(37, 0),  // ""
+        QT_MOC_LITERAL(38, 6),  // "submit"
+        QT_MOC_LITERAL(45, 21)   // "on_pushButton_clicked"
     },
     "mediaManager::loginPage",
-    "dengLuWanCheng",
+    "loginSuccess",
     "",
-    "dianJiQueRen",
+    "submit",
     "on_pushButton_clicked"
 };
 #undef QT_MOC_LITERAL
@@ -91,10 +91,10 @@ Q_CONSTINIT const QMetaObject mediaManager::loginPage::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_mediaManager__loginPage_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<loginPage, std::true_type>,
-        // method 'dengLuWanCheng'
+        // method 'loginSuccess'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        // method 'dianJiQueRen'
+        // method 'submit'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
@@ -108,8 +108,8 @@ void mediaManager::loginPage::qt_static_metacall(QObject *_o, QMetaObject::Call 
         auto *_t = static_cast<loginPage *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->dengLuWanCheng((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 1: _t->dianJiQueRen(); break;
+        case 0: _t->loginSuccess((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->submit(); break;
         case 2: _t->on_pushButton_clicked(); break;
         default: ;
         }
@@ -117,7 +117,7 @@ void mediaManager::loginPage::qt_static_metacall(QObject *_o, QMetaObject::Call 
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (loginPage::*)(const QString & );
-            if (_t _q_method = &loginPage::dengLuWanCheng; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &loginPage::loginSuccess; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
@@ -156,7 +156,7 @@ int mediaManager::loginPage::qt_metacall(QMetaObject::Call _c, int _id, void **_
 }
 
 // SIGNAL 0
-void mediaManager::loginPage::dengLuWanCheng(const QString & _t1)
+void mediaManager::loginPage::loginSuccess(const QString & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
