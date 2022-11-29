@@ -1,6 +1,3 @@
-#ifndef NANYOU_GUANLIYUANDENGLU_H
-#define NANYOU_GUANLIYUANDENGLU_H
-
 #include <QDialog>
 #include <QMap>
 
@@ -16,7 +13,7 @@ class loginPage : public QDialog
 
 public:
     QString dangQianDengLu() const {return user; }
-    loginPage(const QString& shuJuLuJing,
+    loginPage(const QString& pwd,
                      QWidget *parent = nullptr);//声明验证函数
     ~loginPage();
     void mousePressEvent(QMouseEvent *event);
@@ -27,8 +24,8 @@ signals:
 
 private:
     Ui::loginPage *ui;
-    QMap<QString, QByteArray> userData;//
-    QString user, shuJuLuJing;//声明验证界面和口令内容
+    QMap<QString, QByteArray> userData;
+    QString user, pwd;//声明验证界面和口令内容
     QPoint m_startPoint;
 
 private slots:
@@ -38,4 +35,3 @@ private slots:
 
 
 }
-#endif

@@ -456,10 +456,6 @@ debug/moc_mediaFliter.cpp: mediaFliter.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qset.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qvarlengtharray.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qregularexpression.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QDate \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qdatetime.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qcalendar.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qlocale.h \
 		debug/moc_predefs.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/bin/moc.exe
 	E:\Programfiles\qt\6.4.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/work/workspace/Media manager/debug/moc_predefs.h" -IE:/Programfiles/qt/6.4.1/mingw_64/mkspecs/win32-g++ -I"D:/work/workspace/Media manager" -IE:/Programfiles/qt/6.4.1/mingw_64/include -IE:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets -IE:/Programfiles/qt/6.4.1/mingw_64/include/QtGui -IE:/Programfiles/qt/6.4.1/mingw_64/include/QtCore -IE:\Programfiles\VisualStudio2022\VC\Tools\MSVC\14.34.31933\include -IE:\Programfiles\VisualStudio2022\VC\Tools\MSVC\14.34.31933\ATLMFC\include -IE:\Programfiles\VisualStudio2022\VC\Auxiliary\VS\include -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.22000.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\um" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\shared" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\winrt" -I"C:\Program Files (x86)\Windows Kits\10\\include\10.0.22000.0\\cppwinrt" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" mediaFliter.h -o debug\moc_mediaFliter.cpp
@@ -802,7 +798,12 @@ debug/main.o: main.cpp managePage.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qfiledevice.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qfileinfo.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qdatetime.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qcalendar.h
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qcalendar.h \
+		mediaFile.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QAbstractTableModel \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qabstractitemmodel.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QTime \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QDataStream
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o main.cpp
 
 debug/managePage.o: managePage.cpp managePage.h \
@@ -966,8 +967,18 @@ debug/managePage.o: managePage.cpp managePage.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qinputmethod.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qlocale.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qguiapplication_platform.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QComboBox \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qcombobox.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QGridLayout \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qgridlayout.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qlayout.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qboxlayout.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QHeaderView \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qheaderview.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qabstractitemview.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qframe.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qabstractitemmodel.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qitemselectionmodel.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qstyleoption.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
@@ -979,46 +990,14 @@ debug/managePage.o: managePage.cpp managePage.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qtabbar.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qtabwidget.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qrubberband.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qframe.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qabstractitemmodel.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QDateEdit \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qdatetimeedit.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qdatetime.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qcalendar.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QGridLayout \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qgridlayout.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qlayout.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qlayoutitem.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qboxlayout.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QHeaderView \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qheaderview.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qabstractitemview.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qitemselectionmodel.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QLabel \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qlabel.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qpicture.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qtextdocument.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QLineEdit \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qlineedit.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qtextcursor.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qtextformat.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qpen.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtGui/qtextoption.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QPushButton \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qpushbutton.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qabstractbutton.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/QTableView \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtWidgets/qtableview.h \
 		mediaFile.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QAbstractTableModel \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QTime \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qdatetime.h \
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qcalendar.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QDataStream \
-		mediaFliter.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QSortFilterProxyModel \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qsortfilterproxymodel.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qabstractproxymodel.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QDate \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QDir \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qdir.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qfile.h \
@@ -1320,12 +1299,7 @@ debug/mediaFliter.o: mediaFliter.cpp mediaFliter.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qshareddata_impl.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qset.h \
 		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qvarlengtharray.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qregularexpression.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QDate \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qdatetime.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qcalendar.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qlocale.h \
-		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/QDateTime
+		E:/Programfiles/qt/6.4.1/mingw_64/include/QtCore/qregularexpression.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mediaFliter.o mediaFliter.cpp
 
 debug/mediaFile.o: mediaFile.cpp mediaFile.h \

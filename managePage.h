@@ -1,6 +1,3 @@
-#ifndef SHIWUDANBUJIAN_H
-#define SHIWUDANBUJIAN_H
-
 #include <QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -15,24 +12,15 @@ namespace mediaManager {
 		Q_OBJECT
 
 	public:
-		managePage(QWidget* parent = nullptr);
+        managePage(QWidget* parent=nullptr);
 		~managePage();
+		MediaFile* mediaFile;
 
 		//定义界面、数据和筛选器
 	private:
 		Ui::managePage* ui;
-		MediaFile* mediaFile;
 		mediaFliter* mediaFilter;
 
-		//定义数据保存路径和读取情况
-	public slots:
-		QString dataSave();
-		bool dataRead();
-
-		//声明登记数据函数
-	private slots:
-		void dataRemove();
 	};
 
 }
-#endif

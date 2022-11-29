@@ -1,6 +1,3 @@
-#ifndef NANYOU_SHIWUDAN_H
-#define NANYOU_SHIWUDAN_H
-
 #include <QAbstractTableModel>
 #include <QTime>
 #include <QDataStream>
@@ -9,37 +6,30 @@ namespace mediaManager {
 
 	//声明结构体内容
 	struct mediaFile {
-		QString name;
-		QDate date;
-		QString publishDate, type, size, director, actor, award;
-		qint32 views;
-		mediaFile();
+		QString name; //文件名称
+		QDate date; //添加时间
+		QString publishDate; //发行日期
+		QString type; //文件类型
+		QString size; //大小
+		QString director; //导演
+		QString actor; //演员
+		QString award; //奖项
+		qint32 views; //浏览量
+	public:
+		mediaFile(QString fileName = "一个文件", QString publishDate = "2000-01-01", QString fileType = "MP4", QString fileSize = "120MB", QString director = "lzh,zrj", QString actor = "lzh,zrj", QString award = "超级大奖"); //构造函数
 	};
-
-	//声明文件保存与读取函数
-	QDataStream& operator<<(QDataStream& fileStream, const mediaFile& mediaFile);
-	QDataStream& operator>>(QDataStream& fileStream, mediaFile& mediaFile);
 
 	class MediaFile : public QAbstractTableModel {
 		Q_OBJECT
 			//建立结构体数组储存数据
 			QVector<mediaFile> mediaFileStorage;
-
-		//文件的保存与读取
-		friend QDataStream& operator<<(QDataStream& fileStream, const MediaFile& mediaFile) {
-			return fileStream << mediaFile.mediaFileStorage;
-		}
-		friend QDataStream& operator>>(QDataStream& fileStream, MediaFile& mediaFile) {
-			mediaFile.beginResetModel();
-			fileStream >> mediaFile.mediaFileStorage;
-			mediaFile.endResetModel();
-			return fileStream;
-		}
 	public:
+		//void structInit(QString fileName = "一个文件", QString publishDate = "2000-01-01", QString fileType = "MP4", QString fileSize = "120MB", QString director = "lzh,zrj", QString actor = "lzh,zrj", QString award = "超级大奖");
 		//增加行
+		bool insertRows(int row, int col, const QModelIndex& par, QString fileName = "一个文件", QString publishDate = "2000-01-01", QString fileType = "MP4", QString fileSize = "120MB", QString director = "lzh,zrj", QString actor = "lzh,zrj", QString award = "超级大奖");
 		bool insertRows(int row, int col, const QModelIndex & = QModelIndex()) override;
 		//删除行
-		bool removeRows(int row, int col, const QModelIndex & = QModelIndex()) override;
+		bool removeRows(int row, int col, const QModelIndex & = QModelIndex()) override {};
 		//定义界面总列数
 		int columnCount(const QModelIndex & = QModelIndex()) const override { return 8; }
 		//计算数据条数
@@ -52,11 +42,6 @@ namespace mediaManager {
 			int role = Qt::DisplayRole) const override;
 		//声明界面显示控制函数
 		QVariant data(const QModelIndex& index, int role = Qt::DisplayRole) const override;
-		//声明编辑控制函数
-		Qt::ItemFlags flags(const QModelIndex& index) const override;
-		//声明数据更改函数
-		bool setData(const QModelIndex& index, const QVariant& value,
-			int role = Qt::EditRole);
 		//获取数据信息
 		const QVector<mediaFile>& getMediaFileStorage() const { return mediaFileStorage; }
 		explicit MediaFile(QObject* parent = nullptr);
@@ -64,4 +49,3 @@ namespace mediaManager {
 
 }
 
-#endif
