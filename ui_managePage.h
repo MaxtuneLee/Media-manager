@@ -27,16 +27,16 @@ class Ui_managePage
 {
 public:
     QGridLayout *gridLayout;
-    QComboBox *SheZhiShaiXuanLie;
-    QTableView *duoMeiTiWenJianXianShi;
-    QPushButton *baoCunAnNiu;
-    QPushButton *dengJiAnNiu;
-    QPushButton *duQuAnNiu;
-    QPushButton *queRenDengJiAnNiu;
-    QDateEdit *zuiZaoRiQiBianJI;
-    QDateEdit *zuiWanRiQiBianJI;
+    QComboBox *fliterType;
+    QTableView *mediaList;
+    QPushButton *exportButton;
+    QPushButton *registerButton;
+    QPushButton *importButton;
+    QPushButton *removeButton;
+    QDateEdit *earliestDate;
+    QDateEdit *latestDate;
     QLabel *_z;
-    QLineEdit *neiRong;
+    QLineEdit *searchValue;
     QLabel *label;
 
     void setupUi(QWidget *managePage)
@@ -46,67 +46,67 @@ public:
         managePage->resize(596, 489);
         gridLayout = new QGridLayout(managePage);
         gridLayout->setObjectName("gridLayout");
-        SheZhiShaiXuanLie = new QComboBox(managePage);
-        SheZhiShaiXuanLie->addItem(QString());
-        SheZhiShaiXuanLie->addItem(QString());
-        SheZhiShaiXuanLie->addItem(QString());
-        SheZhiShaiXuanLie->addItem(QString());
-        SheZhiShaiXuanLie->addItem(QString());
-        SheZhiShaiXuanLie->addItem(QString());
-        SheZhiShaiXuanLie->setObjectName("SheZhiShaiXuanLie");
+        fliterType = new QComboBox(managePage);
+        fliterType->addItem(QString());
+        fliterType->addItem(QString());
+        fliterType->addItem(QString());
+        fliterType->addItem(QString());
+        fliterType->addItem(QString());
+        fliterType->addItem(QString());
+        fliterType->setObjectName("fliterType");
 
-        gridLayout->addWidget(SheZhiShaiXuanLie, 6, 3, 1, 1);
+        gridLayout->addWidget(fliterType, 6, 3, 1, 1);
 
-        duoMeiTiWenJianXianShi = new QTableView(managePage);
-        duoMeiTiWenJianXianShi->setObjectName("duoMeiTiWenJianXianShi");
+        mediaList = new QTableView(managePage);
+        mediaList->setObjectName("mediaList");
 
-        gridLayout->addWidget(duoMeiTiWenJianXianShi, 0, 0, 1, 4);
+        gridLayout->addWidget(mediaList, 0, 0, 1, 4);
 
-        baoCunAnNiu = new QPushButton(managePage);
-        baoCunAnNiu->setObjectName("baoCunAnNiu");
+        exportButton = new QPushButton(managePage);
+        exportButton->setObjectName("exportButton");
 
-        gridLayout->addWidget(baoCunAnNiu, 1, 2, 1, 1);
+        gridLayout->addWidget(exportButton, 1, 2, 1, 1);
 
-        dengJiAnNiu = new QPushButton(managePage);
-        dengJiAnNiu->setObjectName("dengJiAnNiu");
+        registerButton = new QPushButton(managePage);
+        registerButton->setObjectName("registerButton");
 
-        gridLayout->addWidget(dengJiAnNiu, 1, 0, 1, 1);
+        gridLayout->addWidget(registerButton, 1, 0, 1, 1);
 
-        duQuAnNiu = new QPushButton(managePage);
-        duQuAnNiu->setObjectName("duQuAnNiu");
+        importButton = new QPushButton(managePage);
+        importButton->setObjectName("importButton");
 
-        gridLayout->addWidget(duQuAnNiu, 1, 3, 1, 1);
+        gridLayout->addWidget(importButton, 1, 3, 1, 1);
 
-        queRenDengJiAnNiu = new QPushButton(managePage);
-        queRenDengJiAnNiu->setObjectName("queRenDengJiAnNiu");
+        removeButton = new QPushButton(managePage);
+        removeButton->setObjectName("removeButton");
 
-        gridLayout->addWidget(queRenDengJiAnNiu, 3, 0, 1, 1);
+        gridLayout->addWidget(removeButton, 3, 0, 1, 1);
 
-        zuiZaoRiQiBianJI = new QDateEdit(managePage);
-        zuiZaoRiQiBianJI->setObjectName("zuiZaoRiQiBianJI");
+        earliestDate = new QDateEdit(managePage);
+        earliestDate->setObjectName("earliestDate");
 
-        gridLayout->addWidget(zuiZaoRiQiBianJI, 6, 0, 1, 1);
+        gridLayout->addWidget(earliestDate, 6, 0, 1, 1);
 
-        zuiWanRiQiBianJI = new QDateEdit(managePage);
-        zuiWanRiQiBianJI->setObjectName("zuiWanRiQiBianJI");
-        zuiWanRiQiBianJI->setDateTime(QDateTime(QDate(2099, 12, 31), QTime(0, 0, 0)));
+        latestDate = new QDateEdit(managePage);
+        latestDate->setObjectName("latestDate");
+        latestDate->setDateTime(QDateTime(QDate(2099, 12, 31), QTime(0, 0, 0)));
 
-        gridLayout->addWidget(zuiWanRiQiBianJI, 6, 1, 1, 1);
+        gridLayout->addWidget(latestDate, 6, 1, 1, 1);
 
         _z = new QLabel(managePage);
         _z->setObjectName("_z");
 
         gridLayout->addWidget(_z, 4, 0, 1, 2);
 
-        neiRong = new QLineEdit(managePage);
-        neiRong->setObjectName("neiRong");
+        searchValue = new QLineEdit(managePage);
+        searchValue->setObjectName("searchValue");
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(neiRong->sizePolicy().hasHeightForWidth());
-        neiRong->setSizePolicy(sizePolicy);
+        sizePolicy.setHeightForWidth(searchValue->sizePolicy().hasHeightForWidth());
+        searchValue->setSizePolicy(sizePolicy);
 
-        gridLayout->addWidget(neiRong, 6, 2, 1, 1);
+        gridLayout->addWidget(searchValue, 6, 2, 1, 1);
 
         label = new QLabel(managePage);
         label->setObjectName("label");
@@ -122,20 +122,20 @@ public:
     void retranslateUi(QWidget *managePage)
     {
         managePage->setWindowTitle(QCoreApplication::translate("managePage", "\345\244\232\345\252\222\344\275\223\346\226\207\344\273\266\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
-        SheZhiShaiXuanLie->setItemText(0, QString());
-        SheZhiShaiXuanLie->setItemText(1, QCoreApplication::translate("managePage", "Type", nullptr));
-        SheZhiShaiXuanLie->setItemText(2, QCoreApplication::translate("managePage", "Director", nullptr));
-        SheZhiShaiXuanLie->setItemText(3, QCoreApplication::translate("managePage", "Name", nullptr));
-        SheZhiShaiXuanLie->setItemText(4, QCoreApplication::translate("managePage", "Actor", nullptr));
-        SheZhiShaiXuanLie->setItemText(5, QCoreApplication::translate("managePage", "Prize", nullptr));
+        fliterType->setItemText(0, QString());
+        fliterType->setItemText(1, QCoreApplication::translate("managePage", "Type", nullptr));
+        fliterType->setItemText(2, QCoreApplication::translate("managePage", "Director", nullptr));
+        fliterType->setItemText(3, QCoreApplication::translate("managePage", "Name", nullptr));
+        fliterType->setItemText(4, QCoreApplication::translate("managePage", "Actor", nullptr));
+        fliterType->setItemText(5, QCoreApplication::translate("managePage", "Prize", nullptr));
 
-        SheZhiShaiXuanLie->setCurrentText(QString());
-        baoCunAnNiu->setText(QCoreApplication::translate("managePage", "Save", nullptr));
-        dengJiAnNiu->setText(QCoreApplication::translate("managePage", "Register", nullptr));
-        duQuAnNiu->setText(QCoreApplication::translate("managePage", "Load", nullptr));
-        queRenDengJiAnNiu->setText(QCoreApplication::translate("managePage", "Remove", nullptr));
-        zuiZaoRiQiBianJI->setDisplayFormat(QCoreApplication::translate("managePage", "yyyy-MM-dd", nullptr));
-        zuiWanRiQiBianJI->setDisplayFormat(QCoreApplication::translate("managePage", "yyyy-MM-dd", nullptr));
+        fliterType->setCurrentText(QString());
+        exportButton->setText(QCoreApplication::translate("managePage", "Save", nullptr));
+        registerButton->setText(QCoreApplication::translate("managePage", "Register", nullptr));
+        importButton->setText(QCoreApplication::translate("managePage", "Load", nullptr));
+        removeButton->setText(QCoreApplication::translate("managePage", "Remove", nullptr));
+        earliestDate->setDisplayFormat(QCoreApplication::translate("managePage", "yyyy-MM-dd", nullptr));
+        latestDate->setDisplayFormat(QCoreApplication::translate("managePage", "yyyy-MM-dd", nullptr));
         _z->setText(QCoreApplication::translate("managePage", "Filter Date: (from, to)", nullptr));
         label->setText(QCoreApplication::translate("managePage", "Search", nullptr));
     } // retranslateUi

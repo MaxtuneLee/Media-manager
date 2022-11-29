@@ -15,13 +15,13 @@ namespace mediaManager {
 	}
 
 	//获取传递时间下限
-	void mediaFliter::minimumDate(QDate date) {
+	void mediaFliter::earliestDate(QDate date) {
 		earliest = date;
 		invalidateFilter();
 	}
 
 	//获取传递时间上限
-	void mediaFliter::maximumDate(QDate date) {
+	void mediaFliter::latestDate(QDate date) {
 		lastest = date;
 		invalidateFilter();
 	}

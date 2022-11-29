@@ -41,13 +41,13 @@ Q_CONSTINIT static const qt_meta_stringdata_mediaManager__managePage_t qt_meta_s
         QT_MOC_LITERAL(25, 8),  // "dataSave"
         QT_MOC_LITERAL(34, 0),  // ""
         QT_MOC_LITERAL(35, 8),  // "dataRead"
-        QT_MOC_LITERAL(44, 12)   // "dataRegister"
+        QT_MOC_LITERAL(44, 12)   // "dataRemove"
     },
     "mediaManager::managePage",
     "dataSave",
     "",
     "dataRead",
-    "dataRegister"
+    "dataRemove"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -91,7 +91,7 @@ Q_CONSTINIT const QMetaObject mediaManager::managePage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'dataRead'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        // method 'dataRegister'
+        // method 'dataRemove'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -107,7 +107,7 @@ void mediaManager::managePage::qt_static_metacall(QObject *_o, QMetaObject::Call
             if (_a[0]) *reinterpret_cast< QString*>(_a[0]) = std::move(_r); }  break;
         case 1: { bool _r = _t->dataRead();
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 2: _t->dataRegister(); break;
+        case 2: _t->dataRemove(); break;
         default: ;
         }
     }

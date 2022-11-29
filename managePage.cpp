@@ -9,68 +9,74 @@
 #include <QtWidgets/QFileDialog>
 
 namespace mediaManager {
+	//设置页面ui操作
+	//新建界面、数据和筛选器
+	managePage::managePage(QWidget* parent)
+		: QWidget(parent), ui(new Ui::managePage)
+		, mediaFile(new MediaFile(this)), mediaFilter(new mediaFliter(1, this))
+	{
+		//建立界面并把界面内容传递给筛选器
+		ui->setupUi(this);
+		mediaFilter->setSourceModel(mediaFile);
+		ui->mediaList->setModel(mediaFilter);
+		ui->mediaList->horizontalHeader()
+			->setSectionResizeMode(QHeaderView::ResizeToContents);
+		ui->mediaList->setSortingEnabled(true);
 
-managePage::managePage(QWidget *parent)
-    : QWidget(parent), ui(new Ui::managePage)
-    , mediaFile(new MediaFile(this)), mediaFilter(new mediaFliter(1, this))//新建界面、数据和筛选器
-{
-    ui->setupUi(this);
-    mediaFilter->setSourceModel(mediaFile);
-    ui->duoMeiTiWenJianXianShi->setModel(mediaFilter);
-    ui->duoMeiTiWenJianXianShi->horizontalHeader()
-        ->setSectionResizeMode(QHeaderView::ResizeToContents);
-    ui->duoMeiTiWenJianXianShi->setSortingEnabled(true);//建立界面并把界面内容传递给筛选器
+		//ui和函数的绑定
+		connect(ui->registerButton, &QPushButton::clicked, this, [this]() {
+			mediaFile->insertRow(mediaFile->rowCount());
+			});
+		connect(ui->removeButton, &QPushButton::clicked,
+			this, &managePage::dataRemove);
+		connect(ui->exportButton, &QPushButton::clicked,
+			this, &managePage::dataSave);
+		connect(ui->importButton, &QPushButton::clicked,
+			this, &managePage::dataRead);
+		connect(ui->earliestDate, &QDateEdit::dateChanged,
+			mediaFilter, &mediaFliter::earliestDate);
+		connect(ui->searchValue, &QLineEdit::textEdited, mediaFilter, &mediaFliter::setInput);
+		connect(ui->fliterType, &QComboBox::currentTextChanged, mediaFilter, &mediaFliter::filterColumn);
+		connect(ui->latestDate, &QDateEdit::dateChanged,
+			mediaFilter, &mediaFliter::latestDate);
+	}
 
-    connect(ui->dengJiAnNiu, &QPushButton::clicked, this, [this]() {
-        mediaFile->insertRow(mediaFile->rowCount());
-    });
-    connect(ui->queRenDengJiAnNiu, &QPushButton::clicked,
-            this, &managePage::dataRegister);
-    connect(ui->baoCunAnNiu, &QPushButton::clicked,
-            this, &managePage::dataSave);
-    connect(ui->duQuAnNiu, &QPushButton::clicked,
-            this, &managePage::dataRead);
-    connect(ui->zuiZaoRiQiBianJI, &QDateEdit::dateChanged,
-            mediaFilter, &mediaFliter::minimumDate);
-    connect(ui->neiRong, &QLineEdit::textEdited, mediaFilter, &mediaFliter::setInput);
-    connect(ui->SheZhiShaiXuanLie, &QComboBox::currentTextChanged,mediaFilter, &mediaFliter::filterColumn);
-    connect(ui->zuiWanRiQiBianJI, &QDateEdit::dateChanged,
-            mediaFilter, &mediaFliter::maximumDate);
-}//将界面上的按钮和输入框与函数链接
+	//删除所选数据
+	void managePage::dataRemove() {
+		auto allSelected = ui->mediaList->selectionModel()->selectedIndexes();
+		for (const QModelIndex& selected : allSelected) {
+			mediaFile->removeRow(selected.row());
+		}
+	}
 
-void managePage::dataRegister() {
-    auto suoYouXuanZe = ui->duoMeiTiWenJianXianShi->selectionModel()->selectedIndexes();
-    for (const QModelIndex& xuanZe : suoYouXuanZe) {
-        mediaFile->removeRow(xuanZe.row());//删除所选数据
-    }
-}
+	//文件的保存
+	QString managePage::dataSave() {
+		QDir d = QDir::home();
+		d.mkdir("database");
+		d.cd("database");
+		QString realPath = QFileDialog::getSaveFileName(this, "导出到", QDir::homePath());
+		QFile f(realPath);
+		f.open(QIODevice::WriteOnly);
+		QDataStream outputStream(&f);
+		outputStream << *mediaFile;
+		return realPath;
+	}
 
-QString managePage::dataSave() {
-    QDir d = QDir::home();
-    d.mkdir("Information");
-    d.cd("Information");
-    QString shiJiLuJing = QFileDialog::getSaveFileName(this, "标题", QDir::homePath());
-    QFile f(shiJiLuJing);
-    f.open(QIODevice::WriteOnly);
-    QDataStream shuChuLiu(&f);
-    shuChuLiu << *mediaFile;
-    return shiJiLuJing;
-}//实现文件的保存
+	//文件数据读取
+	bool managePage::dataRead() {
+		QString select = QFileDialog::getOpenFileName(this, "从文件中读取",
+			QDir::homePath());
+		QFile file(select);
+		file.open(QIODevice::ReadOnly);
+		if (!file.isOpen())
+			return false;
+		QDataStream inputStream(&file);
+		inputStream >> *mediaFile;
+		return inputStream.status() == QDataStream::Ok;
+	}//实现文件的读取
 
-bool managePage::dataRead() {
-    QString xuanZe = QFileDialog::getOpenFileName(this, "Select lost+found data",
-        QDir::homePath());
-    QFile wenJian(xuanZe);
-    wenJian.open(QIODevice::ReadOnly);
-    if (!wenJian.isOpen())
-        return false;
-    QDataStream shuRuLiu(&wenJian);
-    shuRuLiu >> *mediaFile;
-    return shuRuLiu.status() == QDataStream::Ok;
-}//实现文件的读取
-
-managePage::~managePage() {
-    delete ui;
-}//删除界面结束程序
+	managePage::~managePage() {
+		delete ui;
+	}//删除界面结束程序
 
 }
