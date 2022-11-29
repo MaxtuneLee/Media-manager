@@ -1,0 +1,10 @@
+release/main.o
+release/managePage.o
+release/loginPage.o
+release/mediaFliter.o
+release/mediaFile.o
+release/qrc_assets.o
+release/moc_managePage.o
+release/moc_mediaFile.o
+release/moc_mediaFliter.o
+release/moc_loginPage.o

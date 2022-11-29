@@ -2,112 +2,120 @@
 
 namespace mediaManager {
 
-mediaFile::mediaFile() :
-    name("Input") , date(QDate::currentDate()), publishDate("2003-02-23") , type("Input") , daXiao("Input"),
-    daoYan("Input") , yanYuan("Input"), jiangXiang("Input") , liuLanCiShu(0)  {}//初始化结构提内容
+	//初始化结构体内容
+	mediaFile::mediaFile() :
+		name(""), date(QDate::currentDate()), publishDate("2000-01-01"), type(""), size(""),
+		director(""), actor(""), award(""), views(0) {}
 
-QDataStream& operator<<(QDataStream& wenJianLiu, const mediaFile& duoMeiTi) {
-    return wenJianLiu << duoMeiTi.name << duoMeiTi.date << duoMeiTi.type
-                      << duoMeiTi.daXiao << duoMeiTi.daoYan << duoMeiTi.yanYuan
-                      << duoMeiTi.jiangXiang << duoMeiTi.liuLanCiShu;
-}
+	//数据的保存
+	QDataStream& operator<<(QDataStream& fileStream, const mediaFile& mediaFile) {
+		return fileStream << mediaFile.name << mediaFile.date << mediaFile.type
+			<< mediaFile.size << mediaFile.director << mediaFile.actor
+			<< mediaFile.award << mediaFile.views;
+	}
+	//数据的读取
+	QDataStream& operator>>(QDataStream& fileStream, mediaFile& mediaFile) {
+		return fileStream >> mediaFile.name >> mediaFile.date >> mediaFile.type
+			>> mediaFile.size >> mediaFile.director >> mediaFile.actor
+			>> mediaFile.award >> mediaFile.views;
+	}
 
-QDataStream& operator>>(QDataStream& wenJianLiu, mediaFile& duoMeiTi) {
-    return wenJianLiu >> duoMeiTi.name >> duoMeiTi.date >> duoMeiTi.type
-           >> duoMeiTi.daXiao >> duoMeiTi.daoYan >> duoMeiTi.yanYuan
-           >> duoMeiTi.jiangXiang >> duoMeiTi.liuLanCiShu;
-}//实现数据的保存与读取
+	//初始化列表
+	MediaFile::MediaFile(QObject* parent) : QAbstractTableModel{ parent } {}
 
-MediaFile::MediaFile(QObject *parent) : QAbstractTableModel{parent} {}
+	//实现界面增加行
+	bool MediaFile::insertRows(int row, int col, const QModelIndex& par) {
 
-bool MediaFile::insertRows(int hang, int shu, const QModelIndex &par) {
+		if (row > mediaFileStorage.size() || row < 0 || col <= 0)
+			return false;
+		beginInsertRows(par, row, row + col - 1);
+		mediaFileStorage.insert(row, col, mediaFile());
+		endInsertRows();
+		return true;
+	}
 
-    if (hang > duoMieTiZu.size() || hang < 0 || shu <= 0)
-        return false;
-    beginInsertRows(par, hang, hang + shu - 1);
-    duoMieTiZu.insert(hang, shu, mediaFile());
-    endInsertRows();
-    return true;
-}//实现界面增加行
+	//实现界面移除行
+	bool MediaFile::removeRows(int row, int col, const QModelIndex& par) {
+		if (row < 0 || col <= 0 || row + col > mediaFileStorage.size())
+			return false;
+		beginRemoveRows(par, row, row + col - 1);
+		mediaFileStorage.remove(row, col);
+		endRemoveRows();
+		return true;
+	}
 
+	//列表头标识显示
+	QVariant MediaFile::headerData(int index, Qt::Orientation orientation,
+		int role) const {
 
-bool MediaFile::removeRows(int hang, int shu, const QModelIndex &par) {
-    if (hang < 0 || shu <= 0 || hang + shu > duoMieTiZu.size())
-        return false;
-    beginRemoveRows(par, hang, hang + shu - 1);
-    duoMieTiZu.remove(hang, shu);
-    endRemoveRows();
-    return true;
-}//实现界面移除行
+		if (role != Qt::DisplayRole) return QVariant();
 
-QVariant MediaFile::headerData(int diJiGe, Qt::Orientation fangXiang,
-                                     int zuoYong) const {
+		if (orientation == Qt::Vertical)
+			return index + 1; // 0-indexed
 
-    if (zuoYong != Qt::DisplayRole) return QVariant();
+		switch (index) {
+		case 0: return tr("     名称     ");
+		case 1: return tr("      日期      ");
+		case 2: return tr("类型");
+		case 3: return tr("  大小  ");
+		case 4: return tr("     导演     ");
+		case 5: return tr("     演员     ");
+		case 6: return tr("      奖项      ");
+		case 7: return tr("浏览次数");
+		}
+		return QVariant();
+	}
 
-    if (fangXiang == Qt::Vertical)
-        return diJiGe + 1; // 0-indexed
+	//列表显示数据内容
+	QVariant MediaFile::data(const QModelIndex& index, int role) const {
+		const mediaFile& toShow = mediaFileStorage.at(index.row());
 
-    switch (diJiGe) {
-    case 0: return tr("     Name     ");
-    case 1: return tr("      Date      ");
-    case 2: return tr("Type");
-    case 3: return tr("  Size  ");
-    case 4: return tr("     Director     ");
-    case 5: return tr("     Actor     ");
-    case 6: return tr("      Prize      ");
-    case 7: return tr("Times");
-    }
-    return QVariant();
-}//实现界面头标识显示
+		if (role != Qt::DisplayRole)
+			return QVariant();
 
+		switch (index.column()) {
+		case 0: return toShow.name;
+		case 1: return toShow.date;
+		case 2: return toShow.type;
+		case 3: return toShow.size;
+		case 4: return toShow.director;
+		case 5: return toShow.actor;
+		case 6: return toShow.award;
+		case 7: return toShow.views;
+		}
+		return QVariant();
+	}
 
-QVariant MediaFile::data(const QModelIndex &index, int zuoYong) const {
-    const mediaFile &toShow = duoMieTiZu.at(index.row());
+	//数据编辑控制
+	Qt::ItemFlags MediaFile::flags(const QModelIndex& index) const {
 
-    if (zuoYong != Qt::DisplayRole)
-        return QVariant();
+		//role更改为可编辑
+		return QAbstractTableModel::flags(index) | Qt::ItemIsEditable;
+	}
 
+	//数据编辑
+	bool MediaFile::setData(const QModelIndex& index, const QVariant& value, int role) {
 
-    switch (index.column()) {
-    case 0: return toShow.name;
-    case 1: return toShow.date;
-    case 2: return toShow.type;
-    case 3: return toShow.daXiao;
-    case 4: return toShow.daoYan;
-    case 5: return toShow.yanYuan;
-    case 6: return toShow.jiangXiang;
-    case 7: return toShow.liuLanCiShu;
-    }
-    return QVariant();
-}//实现界面显示数据内容
+		if (role != Qt::EditRole) return false;
 
-Qt::ItemFlags MediaFile::flags(const QModelIndex &suoYin) const {
+		auto col = index.column(), row = index.row();
+		switch (col) {
+		case 0: mediaFileStorage[row].name = value.toString(); break;
+		case 1:
+			//将输入的日期格式化方便排序与查找
+			mediaFileStorage[row].date = QDate::fromString((value.toString()), "yyyy/MM/dd");
+			mediaFileStorage[row].publishDate = value.toString();
+			break;
+		case 2: mediaFileStorage[row].type = value.toString(); break;
+		case 3: mediaFileStorage[row].size = value.toString(); break;
+		case 4: mediaFileStorage[row].director = value.toString(); break;
+		case 5: mediaFileStorage[row].actor = value.toString(); break;
+		case 6: mediaFileStorage[row].award = value.toString(); break;
+		case 7: mediaFileStorage[row].views = value.toInt(); break;
+		default: return false;
+		}
 
-    return QAbstractTableModel::flags(suoYin) | Qt::ItemIsEditable;
-}//实现控制数据编辑
-
-bool MediaFile::setData(const QModelIndex &suoYin, const QVariant &zhi, int zuoYong) {
-
-    if (zuoYong != Qt::EditRole) return false;
-
-    auto lie = suoYin.column(), hang = suoYin.row();
-    switch (lie) {
-    case 0: duoMieTiZu[hang].name = zhi.toString(); break;
-    case 1:
-        duoMieTiZu[hang].date =  QDate::fromString((zhi.toString()), "yyyy/MM/dd");
-        duoMieTiZu[hang].publishDate = zhi.toString();
-        break;//将输入的日期格式化方便排序与查找
-    case 2: duoMieTiZu[hang].type = zhi.toString(); break;
-    case 3: duoMieTiZu[hang].daXiao = zhi.toString(); break;
-    case 4: duoMieTiZu[hang].daoYan = zhi.toString(); break;
-    case 5: duoMieTiZu[hang].yanYuan = zhi.toString(); break;
-    case 6: duoMieTiZu[hang].jiangXiang = zhi.toString(); break;
-    case 7: duoMieTiZu[hang].liuLanCiShu = zhi.toInt(); break;
-    default: return false;
-    }
-
-    return true;
-}//实现编辑数据内容
+		return true;
+	}
 
 }

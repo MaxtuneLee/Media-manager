@@ -1,0 +1,10 @@
+debug/main.o
+debug/managePage.o
+debug/loginPage.o
+debug/mediaFliter.o
+debug/mediaFile.o
+debug/qrc_assets.o
+debug/moc_managePage.o
+debug/moc_mediaFile.o
+debug/moc_mediaFliter.o
+debug/moc_loginPage.o

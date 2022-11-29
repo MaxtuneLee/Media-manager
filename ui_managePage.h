@@ -89,7 +89,7 @@ public:
 
         latestDate = new QDateEdit(managePage);
         latestDate->setObjectName("latestDate");
-        latestDate->setDateTime(QDateTime(QDate(2099, 12, 31), QTime(0, 0, 0)));
+        latestDate->setDateTime(QDateTime(QDate(2099, 12, 29), QTime(0, 0, 0)));
 
         gridLayout->addWidget(latestDate, 6, 1, 1, 1);
 

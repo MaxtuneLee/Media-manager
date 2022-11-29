@@ -1,0 +1,2 @@
+﻿  mediaFile.cpp
+C:\Users\SoulW\AppData\Local\QtMsBuild\qt_globals.targets(786,7): error MSB4184: 无法计算表达式“[System.IO.File]::ReadAllText(C:\Users\SoulW\AppData\Local\QtMsBuild\qt.natvis.xml)”。未能找到文件“C:\Users\SoulW\AppData\Local\QtMsBuild\qt.natvis.xml”。

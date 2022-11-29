@@ -31,7 +31,7 @@ struct qt_meta_stringdata_mediaManager__managePage_t {
     char stringdata1[9];
     char stringdata2[1];
     char stringdata3[9];
-    char stringdata4[13];
+    char stringdata4[11];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_mediaManager__managePage_t::offsetsAndSizes) + ofs), len 
@@ -41,7 +41,7 @@ Q_CONSTINIT static const qt_meta_stringdata_mediaManager__managePage_t qt_meta_s
         QT_MOC_LITERAL(25, 8),  // "dataSave"
         QT_MOC_LITERAL(34, 0),  // ""
         QT_MOC_LITERAL(35, 8),  // "dataRead"
-        QT_MOC_LITERAL(44, 12)   // "dataRemove"
+        QT_MOC_LITERAL(44, 10)   // "dataRemove"
     },
     "mediaManager::managePage",
     "dataSave",

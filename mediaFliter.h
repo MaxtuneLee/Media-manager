@@ -24,7 +24,7 @@ private:
     int dateColumn;//声明日期上下限和筛选内容所在列标识和判断函数
 public:
     QString ShuRuNeiRong() const { return input; }
-    void setInput(QString zhi);
+    void setInput(QString value);
     int shaiXuanLie() const { return dateColumn; }
     void filterColumn(QString suoZaiLie);//声明获取搜索内容和搜索列函数
 private:

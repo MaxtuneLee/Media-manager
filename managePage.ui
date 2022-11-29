@@ -15,7 +15,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="6" column="3">
-    <widget class="QComboBox" name="SheZhiShaiXuanLie">
+    <widget class="QComboBox" name="fliterType">
      <property name="currentText">
       <string/>
      </property>
@@ -52,45 +52,45 @@
     </widget>
    </item>
    <item row="0" column="0" colspan="4">
-    <widget class="QTableView" name="duoMeiTiWenJianXianShi"/>
+    <widget class="QTableView" name="mediaList"/>
    </item>
    <item row="1" column="2">
-    <widget class="QPushButton" name="baoCunAnNiu">
+    <widget class="QPushButton" name="exportButton">
      <property name="text">
       <string>Save</string>
      </property>
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QPushButton" name="dengJiAnNiu">
+    <widget class="QPushButton" name="registerButton">
      <property name="text">
       <string>Register</string>
      </property>
     </widget>
    </item>
    <item row="1" column="3">
-    <widget class="QPushButton" name="duQuAnNiu">
+    <widget class="QPushButton" name="importButton">
      <property name="text">
       <string>Load</string>
      </property>
     </widget>
    </item>
    <item row="3" column="0">
-    <widget class="QPushButton" name="queRenDengJiAnNiu">
+    <widget class="QPushButton" name="removeButton">
      <property name="text">
       <string>Remove</string>
      </property>
     </widget>
    </item>
    <item row="6" column="0">
-    <widget class="QDateEdit" name="zuiZaoRiQiBianJI">
+    <widget class="QDateEdit" name="earliestDate">
      <property name="displayFormat">
       <string>yyyy-MM-dd</string>
      </property>
     </widget>
    </item>
    <item row="6" column="1">
-    <widget class="QDateEdit" name="zuiWanRiQiBianJI">
+    <widget class="QDateEdit" name="latestDate">
      <property name="dateTime">
       <datetime>
        <hour>0</hour>
@@ -98,7 +98,7 @@
        <second>0</second>
        <year>2099</year>
        <month>12</month>
-       <day>31</day>
+       <day>29</day>
       </datetime>
      </property>
      <property name="displayFormat">
@@ -114,7 +114,7 @@
     </widget>
    </item>
    <item row="6" column="2">
-    <widget class="QLineEdit" name="neiRong">
+    <widget class="QLineEdit" name="searchValue">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
        <horstretch>0</horstretch>
