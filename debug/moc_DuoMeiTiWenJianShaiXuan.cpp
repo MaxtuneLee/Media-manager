@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'MediaFliter.h'
+** Meta object code from reading C++ file 'mediaFliter.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.1)
 **
@@ -7,10 +7,10 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../DuoMeiTiWenJianShaiXuan.h"
+#include "../mediaFliter.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'DuoMeiTiWenJianShaiXuan.h' doesn't include <QObject>."
+#error "The header file 'mediaFliter.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -25,22 +25,22 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
-struct qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t {
+struct qt_meta_stringdata_mediaManager__mediaFliter_t {
     uint offsetsAndSizes[2];
-    char stringdata0[38];
+    char stringdata0[26];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan = {
+    uint(sizeof(qt_meta_stringdata_mediaManager__mediaFliter_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_mediaManager__mediaFliter_t qt_meta_stringdata_mediaManager__mediaFliter = {
     {
-        QT_MOC_LITERAL(0, 31)   // "mediaManager::MediaFliter"
+        QT_MOC_LITERAL(0, 25)   // "mediaManager::mediaFliter"
     },
-    "mediaManager::MediaFliter"
+    "mediaManager::mediaFliter"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJianShaiXuan[] = {
+Q_CONSTINIT static const uint qt_meta_data_mediaManager__mediaFliter[] = {
 
  // content:
       10,       // revision
@@ -56,20 +56,20 @@ Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJianShaiXuan[] = {
        0        // eod
 };
 
-Q_CONSTINIT const QMetaObject mediaManager::MediaFliter::staticMetaObject = { {
+Q_CONSTINIT const QMetaObject mediaManager::mediaFliter::staticMetaObject = { {
     QMetaObject::SuperData::link<QSortFilterProxyModel::staticMetaObject>(),
-    qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan.offsetsAndSizes,
-    qt_meta_data_nanYou__DuoMeiTiWenJianShaiXuan,
+    qt_meta_stringdata_mediaManager__mediaFliter.offsetsAndSizes,
+    qt_meta_data_mediaManager__mediaFliter,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_mediaManager__mediaFliter_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<MediaFliter, std::true_type>
+        QtPrivate::TypeAndForceComplete<mediaFliter, std::true_type>
     >,
     nullptr
 } };
 
-void mediaManager::MediaFliter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void mediaManager::mediaFliter::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     (void)_o;
     (void)_id;
@@ -77,20 +77,20 @@ void mediaManager::MediaFliter::qt_static_metacall(QObject *_o, QMetaObject::Cal
     (void)_a;
 }
 
-const QMetaObject *mediaManager::MediaFliter::metaObject() const
+const QMetaObject *mediaManager::mediaFliter::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *mediaManager::MediaFliter::qt_metacast(const char *_clname)
+void *mediaManager::mediaFliter::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_nanYou__DuoMeiTiWenJianShaiXuan.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_mediaManager__mediaFliter.stringdata0))
         return static_cast<void*>(this);
     return QSortFilterProxyModel::qt_metacast(_clname);
 }
 
-int mediaManager::MediaFliter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int mediaManager::mediaFliter::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QSortFilterProxyModel::qt_metacall(_c, _id, _a);
     return _id;

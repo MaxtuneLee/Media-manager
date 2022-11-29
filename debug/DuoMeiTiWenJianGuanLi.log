@@ -1,2 +1,51 @@
-﻿  main.cpp
-C:\Users\SoulW\AppData\Local\QtMsBuild\qt_globals.targets(786,7): error MSB4184: 无法计算表达式“[System.IO.File]::ReadAllText(C:\Users\SoulW\AppData\Local\QtMsBuild\qt.natvis.xml)”。未能找到文件“C:\Users\SoulW\AppData\Local\QtMsBuild\qt.natvis.xml”。
+﻿  Generate moc_predefs.h
+  UIC managePage.ui
+  UIC loginPage.ui
+  RCC assets.qrc
+  MOC mediaFile.h
+  MOC managePage.h
+  MOC mediaFliter.h
+  mediaFile.cpp
+  managePage.cpp
+managePage.cpp(14,45): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(17,7): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(19,7): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(20,7): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(22,7): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(24,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(27,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(29,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(31,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(33,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(35,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(36,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(37,15): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(42,27): error C2027: 使用了未定义类型“Ui::managePage”
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+managePage.cpp(43,5): error C2530: “xuanZe”: 必须初始化引用
+managePage.cpp(43,36): error C2143: 语法错误: 缺少“;”(在“:”的前面)
+managePage.cpp(43,5): error C3536: “suoYouXuanZe”: 初始化之前无法使用
+managePage.cpp(43,50): error C2143: 语法错误: 缺少“;”(在“)”的前面)
+managePage.cpp(73,5): warning C4150: 删除指向不完整“Ui::managePage”类型的指针；没有调用析构函数
+D:\work\workspace\Media manager\managePage.h(7,22): message : 参见“Ui::managePage”的声明
+  mediaFliter.cpp
+  loginPage.cpp
+  main.cpp
+  moc_DuoMeiTiWenJian.cpp
+  moc_managePage.cpp
+  moc_DuoMeiTiWenJianShaiXuan.cpp
+  qrc_assets.cpp
+  正在生成代码...

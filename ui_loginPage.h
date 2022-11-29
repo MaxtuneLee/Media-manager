@@ -52,6 +52,7 @@ public:
             icon.addFile(QString::fromUtf8("."), QSize(), QIcon::Normal, QIcon::Off);
         }
         mediaManager__loginPage->setWindowIcon(icon);
+        mediaManager__loginPage->setWindowOpacity(1.000000000000000);
         mediaManager__loginPage->setStyleSheet(QString::fromUtf8("background-color: #eef2f8;\n"
 "border-color: rgb(7, 5, 41);\n"
 "border: 1px;\n"

@@ -1,5 +1,5 @@
 #undef main
-#include "DuoMeiTiWenJianBuJian.h"
+#include "managePage.h"
 #include "loginPage.h"
 
 #include <QApplication>
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     //进行口令验证
     mediaManager::loginPage login(d.absolutePath() + "/passwd");
     //进行数据处理
-    mediaManager::MediaComponent w;
+    mediaManager::managePage w;
     if (login.exec() == QDialog::Accepted) {
         //显示界面
         w.show();

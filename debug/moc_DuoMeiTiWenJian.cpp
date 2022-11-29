@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'MediaFile.h'
+** Meta object code from reading C++ file 'mediaFile.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.4.1)
 **
@@ -7,10 +7,10 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../DuoMeiTiWenJian.h"
+#include "../mediaFile.h"
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'DuoMeiTiWenJian.h' doesn't include <QObject>."
+#error "The header file 'mediaFile.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 68
 #error "This file was generated using the moc from 6.4.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -25,13 +25,13 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
-struct qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t {
+struct qt_meta_stringdata_mediaManager__MediaFile_t {
     uint offsetsAndSizes[2];
-    char stringdata0[30];
+    char stringdata0[24];
 };
 #define QT_MOC_LITERAL(ofs, len) \
-    uint(sizeof(qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t::offsetsAndSizes) + ofs), len 
-Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t qt_meta_stringdata_nanYou__DuoMeiTiWenJian = {
+    uint(sizeof(qt_meta_stringdata_mediaManager__MediaFile_t::offsetsAndSizes) + ofs), len 
+Q_CONSTINIT static const qt_meta_stringdata_mediaManager__MediaFile_t qt_meta_stringdata_mediaManager__MediaFile = {
     {
         QT_MOC_LITERAL(0, 23)   // "mediaManager::MediaFile"
     },
@@ -40,7 +40,7 @@ Q_CONSTINIT static const qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t qt_meta_st
 #undef QT_MOC_LITERAL
 } // unnamed namespace
 
-Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJian[] = {
+Q_CONSTINIT static const uint qt_meta_data_mediaManager__MediaFile[] = {
 
  // content:
       10,       // revision
@@ -58,11 +58,11 @@ Q_CONSTINIT static const uint qt_meta_data_nanYou__DuoMeiTiWenJian[] = {
 
 Q_CONSTINIT const QMetaObject mediaManager::MediaFile::staticMetaObject = { {
     QMetaObject::SuperData::link<QAbstractTableModel::staticMetaObject>(),
-    qt_meta_stringdata_nanYou__DuoMeiTiWenJian.offsetsAndSizes,
-    qt_meta_data_nanYou__DuoMeiTiWenJian,
+    qt_meta_stringdata_mediaManager__MediaFile.offsetsAndSizes,
+    qt_meta_data_mediaManager__MediaFile,
     qt_static_metacall,
     nullptr,
-    qt_incomplete_metaTypeArray<qt_meta_stringdata_nanYou__DuoMeiTiWenJian_t,
+    qt_incomplete_metaTypeArray<qt_meta_stringdata_mediaManager__MediaFile_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MediaFile, std::true_type>
     >,
@@ -85,7 +85,7 @@ const QMetaObject *mediaManager::MediaFile::metaObject() const
 void *mediaManager::MediaFile::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_nanYou__DuoMeiTiWenJian.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_mediaManager__MediaFile.stringdata0))
         return static_cast<void*>(this);
     return QAbstractTableModel::qt_metacast(_clname);
 }

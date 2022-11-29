@@ -6,19 +6,19 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
 SOURCES += \
         main.cpp \
-    DuoMeiTiWenJianBuJian.cpp \
+    managePage.cpp \
     loginPage.cpp \
-    DuoMeiTiWenJianShaiXuan.cpp \
-    DuoMeiTiWenJian.cpp
+    mediaFliter.cpp \
+    mediaFile.cpp
 
 HEADERS += \
-    DuoMeiTiWenJianBuJian.h \
-    DuoMeiTiWenJian.h \
-    DuoMeiTiWenJianShaiXuan.h \
+    managePage.h \
+    mediaFile.h \
+    mediaFliter.h \
     loginPage.h
 
 FORMS += \
-    DuoMeiTiWenJianBuJian.ui \
+    managePage.ui \
     loginPage.ui
 
 qnx: target.path = /tmp/$${TARGET}/bin

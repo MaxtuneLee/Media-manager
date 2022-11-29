@@ -1,10 +1,10 @@
 debug/main.o
-debug/DuoMeiTiWenJianBuJian.o
+debug/managePage.o
 debug/loginPage.o
-debug/DuoMeiTiWenJianShaiXuan.o
-debug/DuoMeiTiWenJian.o
+debug/mediaFliter.o
+debug/mediaFile.o
 debug/qrc_assets.o
-debug/moc_DuoMeiTiWenJianBuJian.o
-debug/moc_DuoMeiTiWenJian.o
-debug/moc_DuoMeiTiWenJianShaiXuan.o
+debug/moc_managePage.o
+debug/moc_mediaFile.o
+debug/moc_mediaFliter.o
 debug/moc_loginPage.o

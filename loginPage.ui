@@ -32,6 +32,9 @@
    <iconset theme="face-smile-big">
     <normaloff>.</normaloff>.</iconset>
   </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color: #eef2f8;
 border-color: rgb(7, 5, 41);

@@ -47,13 +47,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DuoMeiTiWenJian.cpp">
+    <ClCompile Include="mediaFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DuoMeiTiWenJianBuJian.cpp">
+    <ClCompile Include="managePage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DuoMeiTiWenJianShaiXuan.cpp">
+    <ClCompile Include="mediaFliter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="loginPage.cpp">
@@ -64,13 +64,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="DuoMeiTiWenJian.h">
+    <CustomBuild Include="mediaFile.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="DuoMeiTiWenJianBuJian.h">
+    <CustomBuild Include="managePage.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="DuoMeiTiWenJianShaiXuan.h">
+    <CustomBuild Include="mediaFliter.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <ClInclude Include="loginPage.h">
@@ -84,10 +84,10 @@
     <ClCompile Include="release\moc_DuoMeiTiWenJian.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="debug\moc_DuoMeiTiWenJianBuJian.cpp">
+    <ClCompile Include="debug\moc_managePage.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="release\moc_DuoMeiTiWenJianBuJian.cpp">
+    <ClCompile Include="release\moc_managePage.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="debug\moc_DuoMeiTiWenJianShaiXuan.cpp">
@@ -108,7 +108,7 @@
     <ClCompile Include="release\qrc_assets.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClInclude Include="ui_DuoMeiTiWenJianBuJian.h">
+    <ClInclude Include="ui_managePage.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="ui_loginPage.h">
@@ -116,7 +116,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="DuoMeiTiWenJianBuJian.ui">
+    <CustomBuild Include="managePage.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
     <CustomBuild Include="loginPage.ui">
