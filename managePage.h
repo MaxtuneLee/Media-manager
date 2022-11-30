@@ -1,5 +1,5 @@
-#ifndef SHIWUDANBUJIAN_H
-#define SHIWUDANBUJIAN_H
+#ifndef MEDIA_MANAGER_MANAGEPAGE_H
+#define MEDIA_MANAGER_MANAGEPAGE_H
 
 #include <QWidget>
 

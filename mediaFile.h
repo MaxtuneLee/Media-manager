@@ -1,5 +1,5 @@
-#ifndef NANYOU_SHIWUDAN_H
-#define NANYOU_SHIWUDAN_H
+#ifndef MEDIA_MANAGER_MEDIAFILE_H
+#define MEDIA_MANAGER_MEDIAFILE_H
 
 #include <QAbstractTableModel>
 #include <QTime>

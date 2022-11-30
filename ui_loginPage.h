@@ -110,10 +110,16 @@ public:
         pwdInput = new QLineEdit(mediaManager__loginPage);
         pwdInput->setObjectName("pwdInput");
         pwdInput->setMinimumSize(QSize(0, 30));
-        pwdInput->setStyleSheet(QString::fromUtf8("border-radius: 8px;\n"
+        pwdInput->setStyleSheet(QString::fromUtf8("QLineEdit{\n"
+"border-radius: 8px;\n"
 "border-bottom-color: white;\n"
 "background-color:white;\n"
-"padding: 6px;"));
+"padding: 6px;\n"
+"}\n"
+"\n"
+"QLineEdit:hover{\n"
+"border: 1px solid  #429c82;\n"
+"}"));
         pwdInput->setEchoMode(QLineEdit::Password);
 
         horizontalLayout->addWidget(pwdInput);
@@ -127,22 +133,33 @@ public:
         submitButton->setObjectName("submitButton");
         submitButton->setMinimumSize(QSize(0, 0));
         submitButton->setCursor(QCursor(Qt::PointingHandCursor));
-        submitButton->setStyleSheet(QString::fromUtf8("color: white;\n"
+        submitButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"color: white;\n"
 "background-color: #429c82;\n"
-"padding: 10px;\n"
-"border: 0;\n"
-"border-radius: 18px;"));
+"border-radius: 18px;\n"
+"border: 1px solid  #429c82;\n"
+"padding:10px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"background-color: #2c6957;\n"
+"}"));
 
         horizontalLayout_2->addWidget(submitButton);
 
         pushButton = new QPushButton(mediaManager__loginPage);
         pushButton->setObjectName("pushButton");
         pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton->setStyleSheet(QString::fromUtf8("color: white;\n"
-"background-color: #969696;\n"
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: transparent;\n"
+"border: 1px solid  #696969;\n"
+"color:#696969;\n"
 "padding: 10px;\n"
-"border: 0;\n"
-"border-radius: 18px;"));
+"border-radius: 18px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"color: white;\n"
+"background-color: #696969;\n"
+"}"));
 
         horizontalLayout_2->addWidget(pushButton);
 

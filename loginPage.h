@@ -1,5 +1,5 @@
-#ifndef NANYOU_GUANLIYUANDENGLU_H
-#define NANYOU_GUANLIYUANDENGLU_H
+#ifndef MEDIA_MANAGER_LOGIN_H
+#define MEDIA_MANAGER_LOGIN_H
 
 #include <QDialog>
 #include <QMap>

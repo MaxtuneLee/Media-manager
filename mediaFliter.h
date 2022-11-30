@@ -1,5 +1,5 @@
-#ifndef NANYOU_SHIWUDANSHAIXUAN_H
-#define NANYOU_SHIWUDANSHAIXUAN_H
+#ifndef MEDIA_MANAGER_MEDIAFLITER_H
+#define MEDIA_MANAGER_MEDIAFLITER_H
 
 #include <QSortFilterProxyModel>
 #include <QDate>

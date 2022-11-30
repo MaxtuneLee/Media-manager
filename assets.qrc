@@ -1,5 +1,10 @@
 <RCC>
     <qresource prefix="/images">
         <file>assets/images/avatar.png</file>
+        <file>assets/images/date.png</file>
+        <file>assets/images/arrow.png</file>
+        <file>assets/images/arrow-up.png</file>
+        <file>assets/images/arrow-left.png</file>
+        <file>assets/images/arrow-right.png</file>
     </qresource>
 </RCC>
