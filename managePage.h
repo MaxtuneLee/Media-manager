@@ -17,6 +17,7 @@ namespace mediaManager {
 	public:
 		managePage(QWidget* parent = nullptr);
 		~managePage();
+		QString fileType = ".mmdb";
 
 		//定义界面、数据和筛选器
 	private:

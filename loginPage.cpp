@@ -12,7 +12,7 @@ namespace mediaManager {
 
 	//将验证界面的输入行和按钮和函数链接
 	loginPage::loginPage(const QString& path, QWidget* component) :
-		QDialog(component), ui(new Ui::loginPage), shuJuLuJing(path)//新建验证界面和验证器
+		QDialog(component), ui(new Ui::loginPage), dataPath(path)//新建验证界面和验证器
 	{
 		ui->setupUi(this);
 		//让窗口透明

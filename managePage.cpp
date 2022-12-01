@@ -90,7 +90,7 @@ namespace mediaManager {
 		d.mkdir("database");
 		d.cd("database");
 		QString realPath = QFileDialog::getSaveFileName(this, "导出到", QDir::homePath());
-		QFile f(realPath);
+		QFile f(realPath+fileType);
 		f.open(QIODevice::WriteOnly);
 		QDataStream outputStream(&f);
 		outputStream << *mediaFile;

@@ -55,7 +55,7 @@ namespace mediaManager {
 
 		switch (index) {
 		case 0: return tr("     名称     ");
-		case 1: return tr("      日期      ");
+		case 1: return tr("      发行日期      ");
 		case 2: return tr("类型");
 		case 3: return tr("  大小  ");
 		case 4: return tr("     导演     ");

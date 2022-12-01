@@ -40,7 +40,7 @@ namespace mediaManager {
 	//判断数据是否符合搜索内容
 	bool mediaFliter::isEligible(QString data) const {
 		if (data.isEmpty())
-			return false;
+            return true;
 
 		if ((input.compare(data) == 0) || input.isEmpty())
 			return true;
